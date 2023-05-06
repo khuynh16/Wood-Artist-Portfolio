@@ -1,0 +1,60 @@
+:nth-child(1) {
+  --nth-child: 1;
+}
+:nth-child(2) {
+  --nth-child: 2;
+}
+:nth-child(3) {
+  --nth-child: 3;
+}
+:nth-child(4) {
+  --nth-child: 4;
+}
+:nth-child(5) {
+  --nth-child: 5;
+}
+:nth-child(6) {
+  --nth-child: 6;
+}
+:nth-child(7) {
+  --nth-child: 7;
+}
+:nth-child(8) {
+  --nth-child: 8;
+}
+:nth-child(9) {
+  --nth-child: 9;
+}
+:nth-child(10) {
+  --nth-child: 10;
+}
+:nth-child(11) {
+  --nth-child: 11;
+}
+
+.card {
+  opacity: 0;
+  animation: appear 0.3s ease-out forwards;
+  animation-delay: calc(var(--nth-child) * 0.1s);
+}
+
+.card:hover {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.cardTextBody {
+  background-color: #d2b48d;
+}
+
+.cardText {
+  color: rgb(0, 0, 0);
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,159 @@
+/* html {
+  overflow: hidden;
+} */
+
+/* h1 {
+  color: blue;
+} */
+
+.container {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+}
+
+.mainPic {
+  max-height: 60vh;
+  animation: slide-down 1000ms ease-out forwards;
+  /* animation-delay: 0.2s; */
+}
+
+.shadow {
+  width: 90%;
+  height: 2vh;
+  background: #d9d9d9;
+  border-radius: 50%;
+  animation: appear 1000ms ease-out forwards;
+}
+
+.artistName,
+.artistPhrase span {
+  font-family: "Keania One", cursive;
+}
+
+.artistName {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: absolute;
+
+  top: 5vh;
+  left: 4vw;
+
+  opacity: 0;
+  animation: appear 700ms ease-out forwards;
+  animation-delay: 1000ms;
+}
+
+.artistName span {
+  border-left: 0.4vw solid black;
+  padding-left: 0.8vw;
+}
+
+.artistPhrase {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+
+  right: 4vw;
+  bottom: 5vh;
+
+  opacity: 0;
+  animation: appear 700ms ease-out forwards;
+  animation-delay: 1000ms;
+}
+
+.artistPhrase span {
+  display: flex;
+  justify-content: flex-end;
+  border-right: 0.4vw solid black;
+  padding-right: 0.8vw;
+}
+
+.artistName,
+.artistPhrase {
+  font-size: 2.2vw;
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container img {
+    height: 50vh;
+  }
+
+  .shadow {
+    bottom: 12vh;
+  }
+
+  .artistName,
+  .artistPhrase {
+    font-size: 2rem;
+  }
+
+  .artistName {
+    top: 5vh;
+    left: 8vw;
+  }
+
+  .artistPhrase {
+    bottom: 5vh;
+    right: 8vw;
+  }
+
+  .artistPhrase span {
+    border-right: 5px solid black;
+    padding-right: 0.5rem;
+  }
+
+  .artistName span {
+    border-left: 5px solid black;
+    padding-left: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .container img {
+    height: 40vh;
+  }
+
+  .shadow {
+    bottom: 15vh;
+  }
+
+  .artistName,
+  .artistPhrase {
+    font-size: 1.5rem;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 1000px) {
+  .artistName,
+  .artistPhrase {
+    font-size: 1.7rem;
+  }
+}

@@ -1,0 +1,22 @@
+.logo {
+  width: 9rem;
+  height: auto;
+  margin-left: 2.3vw;
+}
+
+.logo:hover {
+  cursor: pointer;
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+.hideLogoOnHomePage {
+  opacity: 0;
+  cursor: default !important;
+}
+
+@media screen and (max-width: 1440px) {
+  .logo {
+    width: 7rem;
+  }
+}

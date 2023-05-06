@@ -1,0 +1,202 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+}
+
+ul {
+  display: flex;
+}
+
+.instagramIcon,
+.linkedinIcon {
+  display: flex;
+  align-items: center;
+}
+
+.instagramIcon:hover {
+  text-decoration: underline;
+}
+
+.navLinksContainer {
+  width: 35vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* position: absolute; */
+  /* top: 4vh; */
+  margin-right: 4vw;
+}
+
+.hiddenAnimationCSS {
+  opacity: 0;
+  animation: appear 700ms ease-out forwards;
+  animation-delay: 1000ms;
+}
+
+.navLinksContainer button {
+  background-color: white;
+  font-family: "Roboto Condensed", sans-serif;
+
+  font-size: 1.5vw;
+}
+
+.navLinksContainer a button:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+  color: black;
+}
+
+.hamburgerHomePageStyling {
+  width: 35px;
+  height: 1.5rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: white;
+  position: absolute;
+  top: 5vh;
+  right: 8vw;
+}
+
+.hamburgerNonHomePageStyling {
+  width: 35px;
+  height: 1.5rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: white;
+  /* position: absolute;
+  top: 2rem;
+  right: 2rem; */
+  margin-right: 4vw;
+}
+
+.hamburgerHomePageStyling,
+.hamburgerNonHomePageStyling {
+  z-index: 1000;
+}
+
+.hamburger:hover,
+button {
+  cursor: pointer;
+}
+
+.hamburgerLine {
+  width: 100%;
+  height: 3px;
+  background: black;
+}
+
+.expanded {
+  background-color: rgb(10 9 9 / 81%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  z-index: 1000;
+  width: 100vw;
+  margin-top: 90vh;
+}
+
+.activeRoute {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  /* .navLinksContainer {
+    top: 3rem;
+    right: 3rem;
+    width: 25vw;
+  } */
+
+  .navLinksContainer button {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .navLinksContainer {
+    width: 45vw;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .navLinksContainer {
+    width: 50vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navLinksContainer button {
+    display: none;
+  }
+
+  .expanded {
+    position: absolute;
+    z-index: 1000;
+  }
+
+  .expanded button {
+    height: 8vh;
+    width: 100vw;
+    background-color: #66339900;
+    color: white;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 3vh;
+    justify-content: center;
+  }
+
+  .expanded button {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .expanded button:hover {
+    background-color: rgb(107, 100, 100);
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+  }
+
+  .container {
+    justify-content: flex-end;
+  }
+
+  .hamburgerHomePageStyling,
+  .hamburgerNonHomePageStyling {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .expanded {
+    display: none;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 1000px) {
+  nav {
+    height: 20vh;
+  }
+
+  .expanded {
+    height: 110vh;
+  }
+
+  .expanded button {
+    font-size: 5vh;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+}
