@@ -49,13 +49,16 @@ const Contact = () => {
       <Navbar />
       <div className={styles.outerContainer}>
         <div className={styles.innerContainer}>
-          <div className={styles.contactTitle}>Let's Chat!</div>
           <div className={styles.formContent}>
-            <img
-              className={styles.picture}
-              src={contact_pic}
-              alt={"working on beginning_ending project"}
-            ></img>
+            <div className={styles.picDiv}>
+              <img
+                className={styles.picture}
+                src={contact_pic}
+                alt={"shining light on clamped wood"}
+                loading="lazy"
+              ></img>
+              <div className={styles.contactTitle}>Let's Chat!</div>
+            </div>
             <form
               className={styles.form}
               style={{
@@ -113,14 +116,14 @@ const Contact = () => {
                 sx={{
                   fontFamily: "Roboto Condensed, sans-serif",
                   fontWeight: "bold",
-                  fontSize: "1.2rem",
+                  fontSize: "1.4rem",
                   mt: "1rem",
                   textTransform: "capitalize",
                 }}
                 type="submit"
                 value="Submit"
               >
-                Submit Message
+                Submit Your Message!
               </Button>
             </form>
           </div>
