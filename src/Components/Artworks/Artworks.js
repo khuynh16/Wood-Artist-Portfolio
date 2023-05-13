@@ -399,6 +399,54 @@ const ArtworksData = [
       },
     ],
   },
+  {
+    name: "Recess",
+    year: "To add year.",
+    medium: "To add mediums.",
+    dimension: "To add dimensions.",
+    collectionOfPics: [
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Recess/categoryPic.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Recess/categoryPic.jpg"),
+        isCategoryPic: true,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Recess/1.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Recess/1.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Recess/2.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Recess/2.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Recess/3.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Recess/3.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Recess/4.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Recess/4.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Recess/5.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Recess/5.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Recess/6.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Recess/6.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Recess/7.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Recess/7.jpg"),
+        isCategoryPic: false,
+      },
+    ],
+  },
 ];
 
 const justPictures = [];
