@@ -34,6 +34,9 @@
 :nth-child(12) {
   --nth-child: 12;
 }
+:nth-child(13) {
+  --nth-child: 13;
+}
 
 .card {
   opacity: 0;
