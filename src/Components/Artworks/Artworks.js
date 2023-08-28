@@ -401,9 +401,58 @@ const ArtworksData = [
   },
   {
     name: "Recess",
-    year: "To add year.",
-    medium: "To add mediums.",
-    dimension: "To add dimensions.",
+    year: "2023.",
+    medium: "Resin Casting; Laminate Wood Sculpture.",
+    dimension: '9" x 6 1/2" x 3 1/8".',
+    collectionOfPics: [
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Recess/categoryPic.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Recess/categoryPic.jpg"),
+        isCategoryPic: true,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Recess/1.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Recess/1.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Recess/2.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Recess/2.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Recess/3.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Recess/3.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Recess/4.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Recess/4.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Recess/5.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Recess/5.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Recess/6.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Recess/6.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Recess/7.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Recess/7.jpg"),
+        isCategoryPic: false,
+      },
+    ],
+  },
+  {
+    name: "Hermit Crab",
+    year: "2023.",
+    medium:
+      "Fabrid; Monofilament Fishing Line; Push Pins; Laminate; Kinetic Wood Sculpture.",
+    dimension: '120" x 108" x 102".',
     collectionOfPics: [
       {
         thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Recess/categoryPic.jpg"),
