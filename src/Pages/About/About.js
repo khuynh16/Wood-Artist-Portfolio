@@ -12,7 +12,8 @@ const About = () => {
             <img
               className={styles.picture}
               src={about_pic}
-              alt={"looking towards the side of sunset"}
+              alt={"looking up, posing in green fields"}
+              loading="lazy"
             ></img>
             <p className={styles.bannerText}>The Story and Journey.</p>
           </div>

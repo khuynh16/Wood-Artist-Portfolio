@@ -514,6 +514,59 @@ const ArtworksData = [
       },
     ],
   },
+  {
+    name: "Bamboo Glass Ceiling",
+    year: "2023.",
+    medium: "Resin Casting; Yarns; Star Anise; Laminate Wood Sculpture.",
+    dimension: '13" x 13" x 23 1/2".',
+    collectionOfPics: [
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/BambooGlassCeiling/categoryPic.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/BambooGlassCeiling/categoryPic.jpg"),
+        isCategoryPic: true,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/BambooGlassCeiling/1.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/BambooGlassCeiling/1.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/BambooGlassCeiling/2.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/BambooGlassCeiling/2.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/BambooGlassCeiling/3.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/BambooGlassCeiling/3.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/BambooGlassCeiling/4.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/BambooGlassCeiling/4.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/BambooGlassCeiling/5.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/BambooGlassCeiling/5.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/BambooGlassCeiling/6.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/BambooGlassCeiling/6.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/BambooGlassCeiling/7.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/BambooGlassCeiling/7.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/BambooGlassCeiling/8.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/BambooGlassCeiling/8.jpg"),
+        isCategoryPic: false,
+      },
+    ],
+  },
 ];
 
 const justPictures = [];

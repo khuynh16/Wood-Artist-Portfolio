@@ -40,6 +40,9 @@
 :nth-child(14) {
   --nth-child: 14;
 }
+:nth-child(15) {
+  --nth-child: 15;
+}
 
 .card {
   opacity: 0;
