@@ -496,6 +496,24 @@ const ArtworksData = [
       },
     ],
   },
+  {
+    name: "Pop 'n' Drop",
+    year: "2023.",
+    medium: "Hybrid Print on Silk; Wood Joinery; Laminate Wood Sculpture.",
+    dimension: '36" x 10" x 2".',
+    collectionOfPics: [
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/PopNDrop/categoryPic.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/PopNDrop/categoryPic.jpg"),
+        isCategoryPic: true,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/PopNDrop/1.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/PopNDrop/1.jpg"),
+        isCategoryPic: false,
+      },
+    ],
+  },
 ];
 
 const justPictures = [];
