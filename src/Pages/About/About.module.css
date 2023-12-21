@@ -71,7 +71,8 @@ h4 {
 }
 
 .exhibitions2021,
-.exhibitions2022 {
+.exhibitions2022,
+.exhibitions2023 {
   display: flex;
   flex-direction: column;
   margin-left: -20px;
