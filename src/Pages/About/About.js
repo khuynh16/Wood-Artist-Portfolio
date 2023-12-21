@@ -113,6 +113,49 @@ const About = () => {
                 </li>
               </ul>
               <br></br>
+              <h4>2023:</h4>
+              <br></br>
+              <ul className={styles.exhibitions2023}>
+                <li>
+                  2023 Emerging Artists Exhibition at the Delaplaine Arts Center
+                  | Frederick, MD
+                </li>
+                <li>
+                  Sadat Art for Peace 2023 Competition at Herman Maril Gallery |
+                  College Park, MD
+                </li>
+                <li>
+                  Honor Thesis Show at Herman Maril Gallery | College Park, MD
+                </li>
+                <li>
+                  Eye of the Beholder 2023 at Maryland Federation of Art |
+                  Annapolis, MD
+                </li>
+                <li>
+                  'My Personal Best' Exhibition | The Women's Caucus for Art of
+                  Greater | Washington, DC
+                </li>
+                <li>6th Artist Grant - Special Mention Award from TERAVARNA</li>
+                <li>
+                  'Pivotal' Exhibition at Montpelier Arts Center | The Women's
+                  Caucus for Art of Greater | Laurel, MD
+                </li>
+                <li>
+                  Small Wonders 2023 at Maryland Federation of Art | Annapolis,
+                  MD
+                </li>
+                <li>
+                  Welcome New IMDA Cohorts at The Visual Arts Department, UMBC |
+                  Baltimore, MD
+                </li>
+                <li>
+                  UNDER $500 Exhibition at Maryland Art Place | Baltimore, MD
+                </li>
+                <li>
+                  IMDA Open Studios at Lions Brothers Building | Baltimore, MD
+                </li>
+              </ul>
+              <br></br>
               <br></br>
             </span>
             <div className={styles.biography}></div>
