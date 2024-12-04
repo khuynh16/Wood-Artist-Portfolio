@@ -400,6 +400,49 @@ const ArtworksData = [
     ],
   },
   {
+    name: "Beat the Clock",
+    year: "2023.",
+    medium: "Laminating Wood; Crystal Marbles; Resin.",
+    dimension: '11" x 11" x 42".',
+    collectionOfPics: [
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/BeatTheClock/categoryPic.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/BeatTheClock/categoryPic.jpg"),
+        isCategoryPic: true,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/BeatTheClock/1.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/BeatTheClock/1.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/BeatTheClock/2.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/BeatTheClock/2.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/BeatTheClock/3.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/BeatTheClock/3.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/BeatTheClock/4.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/BeatTheClock/4.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/BeatTheClock/5.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/BeatTheClock/5.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/BeatTheClock/6.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/BeatTheClock/6.jpg"),
+        isCategoryPic: false,
+      },
+    ],
+  },
+  {
     name: "Recess",
     year: "2023.",
     medium: "Resin Casting; Laminate Wood Sculpture.",
@@ -497,6 +540,29 @@ const ArtworksData = [
     ],
   },
   {
+    name: "Untitled",
+    year: "2023.",
+    medium: "Laminate Wood Sculpture.",
+    dimension: '3" x 3" x 4.5".',
+    collectionOfPics: [
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Untitled/categoryPic.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Untitled/categoryPic.jpg"),
+        isCategoryPic: true,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Untitled/1.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Untitled/1.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Untitled/2.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Untitled/2.jpg"),
+        isCategoryPic: false,
+      },
+    ],
+  },
+  {
     name: "Pop 'n' Drop",
     year: "2023.",
     medium: "Hybrid Print on Silk; Wood Joinery; Laminate Wood Sculpture.",
@@ -563,6 +629,120 @@ const ArtworksData = [
       {
         thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/BambooGlassCeiling/8.jpg"),
         original: require("../../Assets/Images/ArtImages/Originals/BambooGlassCeiling/8.jpg"),
+        isCategoryPic: false,
+      },
+    ],
+  },
+  {
+    name: "Vitality",
+    year: "2023.",
+    medium: "Mixed Media.",
+    dimension: '10" x 9" x 10". 9" x 7" x 9".',
+    collectionOfPics: [
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Vitality/categoryPic.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Vitality/categoryPic.jpg"),
+        isCategoryPic: true,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Vitality/1.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Vitality/1.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Vitality/2.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Vitality/2.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Vitality/3.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Vitality/3.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Vitality/4.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Vitality/4.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Vitality/5.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Vitality/5.jpg"),
+        isCategoryPic: false,
+      },
+    ],
+  },
+  {
+    name: "Absurdity",
+    year: "2024.",
+    medium: "Joinery Mixed Media. Patterned Wood and Etching. Acrylic.",
+    dimension: '14" x 10" x 16".',
+    collectionOfPics: [
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Absurdity/categoryPic.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Absurdity/categoryPic.jpg"),
+        isCategoryPic: true,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Absurdity/1.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Absurdity/1.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Absurdity/2.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Absurdity/2.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Absurdity/3.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Absurdity/3.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Absurdity/4.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Absurdity/4.jpg"),
+        isCategoryPic: false,
+      },
+    ],
+  },
+  {
+    name: "Serenity",
+    year: "2024.",
+    medium: "Joinery Mixed Media. Patterned Wood and Etching. Acrylic.",
+    dimension: '23" x 12" x 23".',
+    collectionOfPics: [
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Serenity/categoryPic.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Serenity/categoryPic.jpg"),
+        isCategoryPic: true,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Serenity/1.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Serenity/1.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Serenity/2.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Serenity/2.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Serenity/3.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Serenity/3.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Serenity/4.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Serenity/4.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Serenity/5.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Serenity/5.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Serenity/6.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/Serenity/6.jpg"),
         isCategoryPic: false,
       },
     ],

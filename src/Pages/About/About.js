@@ -153,17 +153,24 @@ const About = () => {
                   Honor Thesis Show at Herman Maril Gallery | College Park, MD
                 </li>
                 <li>
+                  Senior Show of UMD Department of Art | College Park, MD |{" "}
+                  <b>
+                    <i>2nd Place Winner</i>
+                  </b>
+                </li>
+                <li>
                   Eye of the Beholder 2023 at Maryland Federation of Art |
                   Annapolis, MD
                 </li>
                 <li>
                   'My Personal Best' Exhibition | The Women's Caucus for Art of
-                  Greater | Washington, DC
+                  Greater Washington, D.C. (WCADC) | Washington, DC
                 </li>
                 <li>6th Artist Grant - Special Mention Award from TERAVARNA</li>
                 <li>
                   'Pivotal' Exhibition at Montpelier Arts Center | The Women's
-                  Caucus for Art of Greater | Laurel, MD
+                  Caucus for Art of Greater Washington, D.C. (WCADC) | Laurel,
+                  MD
                 </li>
                 <li>
                   Small Wonders 2023 at Maryland Federation of Art | Annapolis,
@@ -178,6 +185,72 @@ const About = () => {
                 </li>
                 <li>
                   IMDA Open Studios at Lions Brothers Building | Baltimore, MD
+                </li>
+                <li>
+                  'Unreal & Non-Representational' Juried Art Contest at Gallery
+                  4% | Baltimore, MD |{" "}
+                  <b>
+                    <i>Laurel Award</i>
+                  </b>
+                </li>
+                <li>
+                  '9th OPEN' 2023 International Juried Art Contest at TERAVARNA
+                  | Los Angeles, CA |{" "}
+                  <b>
+                    <i>Finalist Award</i>
+                  </b>
+                </li>
+              </ul>
+              <br></br>
+              <h4>2024:</h4>
+              <br></br>
+              <ul className={styles.exhibitions2024}>
+                <li>
+                  '2nd NATURE' Art Competition at TERAVARNA | Los Angeles, CA |{" "}
+                  <b>
+                    <i>Honorable Mention Award</i>
+                  </b>
+                </li>
+                <li>
+                  'Still and Lifeless' Juried Art Contest at Gallery 4% |
+                  Baltimore, MD |{" "}
+                  <b>
+                    <i>Distinction Award</i>
+                  </b>
+                </li>
+                <li>
+                  'Looking Back' Exhibit at Corgi Clay Art Center | Stafford, VA
+                </li>
+                <li>
+                  'Sustenance' Exhibition at miXt Food Hall | The Women's Caucus
+                  for Art of Greater Washington, D.C. (WCADC) | Brentwood, MD
+                </li>
+                <li>
+                  Reflections 2024 at Maryland Federation of Art | Annapolis, MD
+                </li>
+                <li>
+                  2024 Emerging Artists Exhibition at the Delaplaine Arts Center
+                  | Frederick, MD
+                </li>
+                <li>
+                  'Love Letters to Baltimore + The DMV' in the Asia North 2024
+                  Exhibition | Baltimore, MD
+                </li>
+                <li>
+                  2024 National Juried Exhibition at the Delaplaine Arts Center
+                  | Frederick, MD |{" "}
+                  <b>
+                    <i>3rd Place Winner</i>
+                  </b>
+                </li>
+                <li>
+                  'Sensorium' Multimedia Installation at Lion Brothers Building
+                  | Baltimore, MD
+                </li>
+                <li>
+                  'Celebrate the Colors of the Season' Exhibition at Village of
+                  Friendship Heights | The Women's Caucus for Art of Greater
+                  Washington, D.C. (WCADC) | Chevy Chase, MD
                 </li>
               </ul>
               <br></br>
