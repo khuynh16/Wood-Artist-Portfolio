@@ -400,6 +400,29 @@ const ArtworksData = [
     ],
   },
   {
+    name: "Missing Creator",
+    year: "2022.",
+    medium: "Printed on Laminated Joinery Wood Sculpture.",
+    dimension: "Dimensions: To Be Determined.",
+    collectionOfPics: [
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/MissingCreator/categoryPic.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/MissingCreator/categoryPic.jpg"),
+        isCategoryPic: true,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/MissingCreator/1.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/MissingCreator/1.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/MissingCreator/2.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/MissingCreator/2.jpg"),
+        isCategoryPic: false,
+      },
+    ],
+  },
+  {
     name: "Beat the Clock",
     year: "2023.",
     medium: "Laminating Wood; Crystal Marbles; Resin.",
@@ -581,6 +604,29 @@ const ArtworksData = [
     ],
   },
   {
+    name: "Song Hành",
+    year: "2023.",
+    medium: "Mixed Media.",
+    dimension: '11" x 11".',
+    collectionOfPics: [
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/SongHành/categoryPic.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/SongHành/categoryPic.jpg"),
+        isCategoryPic: true,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/SongHành/1.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/SongHành/1.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/SongHành/2.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/SongHành/2.jpg"),
+        isCategoryPic: false,
+      },
+    ],
+  },
+  {
     name: "Bamboo Glass Ceiling",
     year: "2023.",
     medium: "Resin Casting; Yarns; Star Anise; Laminate Wood Sculpture.",
@@ -702,6 +748,11 @@ const ArtworksData = [
         original: require("../../Assets/Images/ArtImages/Originals/Absurdity/4.jpg"),
         isCategoryPic: false,
       },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Absurdity/5.jpg"),
+        original: "https://vimeo.com/1034864731",
+        isCategoryPic: false,
+      },
     ],
   },
   {
@@ -743,6 +794,11 @@ const ArtworksData = [
       {
         thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Serenity/6.jpg"),
         original: require("../../Assets/Images/ArtImages/Originals/Serenity/6.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Serenity/7.jpg"),
+        original: "https://vimeo.com/1034865202",
         isCategoryPic: false,
       },
     ],

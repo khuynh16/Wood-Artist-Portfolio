@@ -58,6 +58,12 @@
 :nth-child(20) {
   --nth-child: 20;
 }
+:nth-child(21) {
+  --nth-child: 21;
+}
+:nth-child(22) {
+  --nth-child: 22;
+}
 
 .card {
   opacity: 0;

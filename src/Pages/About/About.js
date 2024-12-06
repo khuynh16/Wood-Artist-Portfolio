@@ -25,38 +25,42 @@ const About = () => {
             </h1>
 
             <p className={styles.artistStatement}>
-              My artwork combines technology and sculpture to create interactive
-              works that transcend the boundaries of either medium. Embedded in
-              my artwork is a naive playfulness recalling the good memories of
-              the past, intertwining with the present. In my works, interaction
-              and entertainment are the keys. My audiences are not limited only
-              to vision, but they can use other senses to engage my artworks. My
-              work allows me to find the lucidity and meaning of life as an
-              expatriate who had to adapt to a new home, while acknowledging.
-              The past will never perish, and this moment and my thinking and
-              feeling will endure in my artworks.
+              My artistic practice revolves around the harmonious combination of
+              wood and mixed media, creating interactive works that transcend
+              the conventional boundaries of these mediums. Embedded in my
+              artwork is a naive playfulness; recalling the good memories of the
+              past, intertwining with the present. Interaction and entertainment
+              serve as the foundation for my artistic expression, inviting the
+              audience to participate not only with their vision but with other
+              senses. My work allows me to find the lucidity and meaning of life
+              as an expatriate who had to adapt to a new home, while
+              acknowledging the past will never perish. This moment, my
+              perceptions, and my emotions will endure in the artworks.
               <br></br>
               <br></br>
-              Like language and laughter to me, creativity is a natural human
-              instinct, a foundation of who we are. I have always known that I
-              was born with a certain capacity to create and express myself
-              through Art. Unfortunately, my family would not support me if I
-              went to school for art. Life is too short and seeing an
-              opportunity to pursue what I love, I chose to educate myself as an
-              artist. So far, I have not looked back, and changing my degree to
-              the arts has been the best decision I made. It was a dream to
-              combine Art and Technology.
+              As an artist guided by a life as a Vietnamese American expatriate,
+              I find meaning in the amalgamation of cultural influences and
+              personal experiences. I use wood because it is an enchanting,
+              natural material and sculptures made from wood provide me with the
+              feeling of engaging living things. Joinery and the meticulous
+              arrangement of patterned pieces of wood are the foundation of my
+              woodworking endeavors. Within this craft, I explore the synergy of
+              wood with various mixed materials, combining found objects, resin,
+              acrylic, and more. This interdisciplinary approach modernizes my
+              artwork, expanding the possibilities of expression.
               <br></br>
               <br></br>
-              The art medium I am focusing on in my career is interactive
-              kinetic wood sculpture. I believe wood is an enchanting, natural
-              material. Sculptures made from wood provide me with the feeling of
-              engaging living things whenever I touch them. Additionally, I am
-              integrating my technical knowledge into my wood sculpture, such as
-              augmented reality, different types of motors, and laser cutting.
-              Combining digital and traditional art expands my medium,
-              modernizes my artworks, and opens my artistic mind to
-              interdisciplinary media.
+              Being a Vietnamese American who embraced a new home at a young
+              age, my artwork serves as a narrative that combines tradition and
+              my contemporary's personal journey. Through my art, I seek to
+              stimulate a deep engagement, nurturing an appreciation for the
+              intricate layers that shape both my identity and the stories
+              embedded within each sculpture. In a world marked by rapid change
+              and cultural transformation, I aim to emphasize the celebration of
+              diverse backgrounds and strengths through my artwork by infusing
+              my artwork with personal stories and experiences. Imbued with a
+              rich sense of culture and personal history, my creations merge
+              craftsmanship with digital media to explore innovative artworks.
             </p>
             <h1>
               <span className={styles.h1TagStyling}>&nbsp;Biography:</span>
@@ -68,19 +72,15 @@ const About = () => {
               art through multiple senses. As an expatriate adjusting to a new
               home while embracing my cultural roots, I find meaning and clarity
               in the complex role of life. My art goes beyond static sculptures,
-              blending between wood and technology. Motors, sensors and
+              blending between wood and technology. Motors, sensors, and
               augmented reality (AR) converge in my works, creating vivid
               stories in which nature, mechanics and digital realms come
-              together.
+              together. I graduated from the University of Maryland, College
+              Park and have exhibited my art in prestigious galleries. I am
+              currently a graduate student at University of Maryland, Baltimore
+              County, leveraging my diverse background in fine arts and digital
+              media as well as my teaching and design expertise.
               <br></br>
-              <br></br>I graduated from the University of Maryland, College Park
-              and have exhibited my art in prestigious galleries. I am currently
-              a graduate student at University of Maryland, Baltimore County,
-              leveraging my diverse background in fine arts and digital media as
-              well as my teaching and design expertise. Awards include the
-              Performing and Creative Arts Scholarship, the Paula Santeen
-              Scholarship, Honorable Mention in the 2023 Sadat Peace Contest and
-              Second Place in the Senior Exhibition at UMD, among many others.
               <br></br>
               <br></br>
               Selected exhibitions include:
