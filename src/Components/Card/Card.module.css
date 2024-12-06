@@ -43,6 +43,27 @@
 :nth-child(15) {
   --nth-child: 15;
 }
+:nth-child(16) {
+  --nth-child: 16;
+}
+:nth-child(17) {
+  --nth-child: 17;
+}
+:nth-child(18) {
+  --nth-child: 18;
+}
+:nth-child(19) {
+  --nth-child: 19;
+}
+:nth-child(20) {
+  --nth-child: 20;
+}
+:nth-child(21) {
+  --nth-child: 21;
+}
+:nth-child(22) {
+  --nth-child: 22;
+}
 
 .card {
   opacity: 0;
