@@ -11,10 +11,10 @@ import { Fancybox } from "@fancyapps/ui"; // while not used, needed to run the f
 const Card = () => {
   const [selectedArtworkName, setSelectedArtworkName] = useState("");
   const justMainCategoryPictures = justPictures.filter(
-    (picture) => picture.isCategoryPic === true
+    (picture) => picture.isCategoryPic === true,
   );
   const [currentPicturesArray, setCurrentPicturesArray] = useState(
-    justMainCategoryPictures
+    justMainCategoryPictures,
   );
 
   return (

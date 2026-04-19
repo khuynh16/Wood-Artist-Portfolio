@@ -77,10 +77,22 @@
 
 .cardTextBody {
   background-color: #d2b48d;
+  background-image: url("../../Assets/Images/card-title-background.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .cardText {
   color: rgb(0, 0, 0);
+  text-shadow:
+    1px 0 0 white,
+    -1px 0 0 white,
+    0 1px 0 white,
+    0 -1px 0 white,
+    1px 1px 0 white,
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white;
 }
 
 @keyframes appear {
