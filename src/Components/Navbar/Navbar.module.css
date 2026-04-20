@@ -38,8 +38,7 @@ ul {
 .navLinksContainer button {
   background-color: white;
   font-family: "Roboto Condensed", sans-serif;
-
-  font-size: 1.5vw;
+  font-size: 2rem;
 }
 
 .navLinksContainer a button:hover {
