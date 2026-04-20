@@ -50,7 +50,8 @@
 }
 
 .artistStatement,
-.biography {
+.biography,
+.academicAchievements {
   font-size: 1.5rem;
   font-family: "Roboto", sans-serif;
   line-height: 1.6;
@@ -72,6 +73,7 @@ h4 {
   font-family: "Roboto Condensed", sans-serif;
 }
 
+.academicAchievements,
 .exhibitions2021,
 .exhibitions2022,
 .exhibitions2023,
@@ -168,8 +170,9 @@ h4 {
 
   .artistStatement,
   .biography,
+  .academicAchievements,
   .exhibitionYearButtons {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .image {
@@ -181,13 +184,14 @@ h4 {
     padding-top: 1.5rem;
   }
 
+  .academicAchievements,
   .exhibitions2021,
   .exhibitions2022,
   .exhibitions2023,
   .exhibitions2024,
   .exhibitions2025,
   .exhibitions2026 {
-    margin-left: -1rem;
+    margin-left: -1.3rem;
   }
 }
 

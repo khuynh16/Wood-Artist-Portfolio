@@ -46,62 +46,84 @@ const About = () => {
               </span>
             </h1>
             <p className={styles.artistStatement}>
-              My artistic practice revolves around the harmonious combination of
-              wood and mixed media, creating interactive works that transcend
-              the conventional boundaries of these mediums. Embedded in my
-              artwork is a naive playfulness; recalling the good memories of the
-              past, intertwining with the present. Interaction and entertainment
-              serve as the foundation for my artistic expression, inviting the
-              audience to participate not only with their vision but with other
-              senses. My work allows me to find the lucidity and meaning of life
-              as an expatriate who had to adapt to a new home, while
-              acknowledging the past will never perish. This moment, my
-              perceptions, and my emotions will endure in the artworks.
+              My work focuses on transforming ordinary, overlooked materials
+              into whimsical, visually captivating sculptures. Using wood as my
+              main medium, I often incorporate scraps, found, and repurposed
+              items such as sushi bamboo mats, chopsticks, nut shells, and
+              seashells—objects linked to everyday life, memory, and place. I
+              combine these with man-made materials like resin, invisible
+              threads, and colorful acrylic panels to create intricate
+              mixed-media pieces that explore repetition, pattern, and balance.
               <br></br>
               <br></br>
-              As an artist guided by a life as a Vietnamese American expatriate,
-              I find meaning in the amalgamation of cultural influences and
-              personal experiences. I use wood because it is an enchanting,
-              natural material and sculptures made from wood provide me with the
-              feeling of engaging living things. Joinery and the meticulous
-              arrangement of patterned pieces of wood are the foundation of my
-              woodworking endeavors. Within this craft, I explore the synergy of
-              wood with various mixed materials, combining found objects, resin,
-              acrylic, and more. This interdisciplinary approach modernizes my
-              artwork, expanding the possibilities of expression.
+              Growing up in a modest household, I learned to appreciate the
+              natural world and the potential beauty in things often discarded.
+              This respect for materials guides my practice; I treat each object
+              with care, giving it new life through a patient handcrafting
+              process. My sculptures take time to craft, and in that slow,
+              meditative process, I find a peaceful state of being. For me, art
+              is not just a product—it’s a space where I feel most alive,
+              connected, and whole.
               <br></br>
               <br></br>
-              Being a Vietnamese American who embraced a new home at a young
-              age, my artwork serves as a narrative that combines tradition and
-              my contemporary's personal journey. Through my art, I seek to
-              stimulate a deep engagement, nurturing an appreciation for the
-              intricate layers that shape both my identity and the stories
-              embedded within each sculpture. In a world marked by rapid change
-              and cultural transformation, I aim to emphasize the celebration of
-              diverse backgrounds and strengths through my artwork by infusing
-              my artwork with personal stories and experiences. Imbued with a
-              rich sense of culture and personal history, my creations merge
-              craftsmanship with digital media to explore innovative artworks.
+              While my work might seem playful or abstract, each piece is
+              layered with personal history, literary or cultural references,
+              and reflections on human experience. I don’t aim to explain
+              everything I create—some aspects remain personal and beyond
+              words—but I invite viewers to engage with the materiality and
+              presence of the artwork, finding their own meaning in the forms.
+              What sets my work apart is the balance between fine craftsmanship
+              and simple, everyday materials, and the quiet emotional resonance
+              that comes from this combination. My practice reflects resilience,
+              imagination, and a deep desire to celebrate the beauty in things
+              that are often unnoticed.
             </p>
             <h1>
               <span className={styles.h1TagStyling}>&nbsp;Biography:</span>
             </h1>
             <p className={styles.biography}>
-              My artworks combine tradition and innovation, creating interactive
-              art that transcends all boundaries. My work combines the elegance
-              of wood with digital kinetic art, inviting viewers to experience
-              art through multiple senses. As an expatriate adjusting to a new
-              home while embracing my cultural roots, I find meaning and clarity
-              in the complex role of life. My art goes beyond static sculptures,
-              blending between wood and technology. Motors, sensors, and
-              augmented reality (AR) converge in my works, creating vivid
-              stories in which nature, mechanics and digital realms come
-              together. I graduated from the University of Maryland, College
-              Park and have exhibited my art in prestigious galleries. I am
-              currently a graduate student at University of Maryland, Baltimore
-              County, leveraging my diverse background in fine arts and digital
-              media as well as my teaching and design expertise.
+              Lynn Nguyen (born in 1993) is a Vietnamese American
+              interdisciplinary artist and wood sculptor whose practice explores
+              the intersection of traditional craftsmanship, digital technology,
+              and cultural memory. Drawing from visual aesthetics and East Asian
+              woodworking techniques, her sculptures often incorporate both
+              handcrafted and digital elements to reflect on time, identity, and
+              emotional labor. Through a deep engagement with material and
+              movement, her work investigates themes of resilience, fragility,
+              and the tensions between handmade authenticity and mechanical
+              precision. She holds a BFA in Studio Art from the University of
+              Maryland, College Park, and will graduate soon from her MFA in
+              Intermedia and Digital Art at the University of Maryland,
+              Baltimore County. Nguyen is a member of the Art League of
+              Germantown, INC., the Women's Caucus for Art, and the Washington
+              Sculptors Group. Her work has been recognized for its
+              craftsmanship, conceptual depth, and innovative use of mixed
+              media. She is dedicated to a cross-disciplinary practice that
+              bridges sculpture, digital media, and personal storytelling.
             </p>
+            <h1>
+              <span className={styles.h1TagStyling}>
+                &nbsp;Academic Achievements:
+              </span>
+            </h1>
+            <ul className={styles.academicAchievements}>
+              <li>
+                2022- 2023 | Creative and Performing Arts (CAPA) Scholarship -
+                Department of Arts, University of Maryland, College Park
+              </li>
+              <li>
+                2022- 2023 | Paula Santen Scholarship - Department of Arts,
+                University of Maryland, College Park
+              </li>
+              <li>
+                Summer 2025 | College of Arts, Humanities, & Social Sciences
+                Grant, University of Maryland, Baltimore County
+              </li>
+              <li>
+                Spring 2026 | Scholarly Development Fund, University of
+                Maryland, Baltimore County
+              </li>
+            </ul>
             <h1>
               <span className={styles.h1TagStyling}>&nbsp;Exhibitions:</span>
             </h1>
