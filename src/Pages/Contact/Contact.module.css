@@ -35,7 +35,7 @@ html {
 
 .contactTitle {
   margin-bottom: 1.5rem;
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: bold;
   display: flex;
   justify-content: center;
@@ -58,7 +58,9 @@ html {
   height: 100%;
   object-fit: cover;
   border-radius: 0.5rem;
-  box-shadow: rgb(9 30 66 / 25%) 0px 1px 1px, rgb(9 30 66 / 13%) 0px 0px 1px 1px;
+  box-shadow:
+    rgb(9 30 66 / 25%) 0px 1px 1px,
+    rgb(9 30 66 / 13%) 0px 0px 1px 1px;
 }
 
 .picture {
@@ -80,6 +82,7 @@ html {
   font-size: 1.8rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  position: relative;
 }
 
 .form div:first-child {
@@ -90,12 +93,12 @@ html {
   margin-bottom: 1vh;
 }
 
-.form div:nth-child(1),
+/* .form div:nth-child(1),
 .form div:nth-child(2),
 .form div:nth-child(3),
 .form div:nth-child(4) {
   padding-bottom: 3vh;
-}
+} */
 
 input[type="text"],
 input[type="email"],
@@ -109,8 +112,10 @@ textarea {
   border-radius: 4px;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  box-shadow: rgb(9 30 66 / 25%) 0px 1px 1px, rgb(9 30 66 / 13%) 0px 0px 1px 1px;
+  font-size: 1.5rem;
+  box-shadow:
+    rgb(9 30 66 / 25%) 0px 1px 1px,
+    rgb(9 30 66 / 13%) 0px 0px 1px 1px;
 }
 
 textarea {
@@ -132,9 +137,47 @@ textarea {
   position: relative;
 }
 
+.newsletterTitle {
+  font-size: 3rem;
+  padding-bottom: 5rem;
+  text-align: center;
+}
+
+.newsletterContext {
+  padding-bottom: 3rem;
+}
+
+.newsletterContextContainer {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.newsletterContextContainer Button {
+  width: 100%;
+}
+
+.emailInput::placeholder {
+  font-style: italic;
+  color: #888;
+  opacity: 1; /* ensures consistent rendering across browsers */
+}
+
 @media screen and (max-width: 1600px) {
   .outerContainer {
     max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .form {
+    width: 80%;
+  }
+
+  .contactTitle {
+    font-size: 2.5rem;
   }
 }
 
@@ -142,13 +185,27 @@ textarea {
   textarea {
     height: 7em;
   }
-
-  .contactTitle {
-    font-size: 3rem;
-  }
 }
 
 @media screen and (max-width: 1200px) {
+  .contactTitle {
+    font-size: 3rem;
+  }
+
+  .newsletterTitle {
+    padding-top: 4rem;
+  }
+
+  .form {
+    padding-bottom: 4.5rem;
+  }
+
+  .newsletterContextContainer {
+    width: 100%;
+    position: initial;
+    transform: none;
+  }
+
   .picture {
     width: 100%;
     height: 100%;
@@ -213,6 +270,14 @@ textarea {
     width: 100%;
     overflow-y: scroll;
   }
+
+  .outerContainer {
+    padding-top: 0;
+  }
+
+  .newsletterTitle {
+    padding-top: 2.5rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -224,7 +289,7 @@ textarea {
 
 @media screen and (max-width: 500px) {
   .contactTitle {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
 }
 
