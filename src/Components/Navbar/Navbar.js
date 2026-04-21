@@ -18,8 +18,8 @@ const Navbar = () => {
             isNavExpanded
               ? styles.expanded
               : location.pathname === "/"
-              ? styles.hiddenAnimationCSS + " " + styles.navLinksContainer
-              : styles.navLinksContainer
+                ? styles.hiddenAnimationCSS + " " + styles.navLinksContainer
+                : styles.navLinksContainer
           }
         >
           <Link to="/about">
@@ -49,19 +49,10 @@ const Navbar = () => {
               Exhibitions
             </button>
           </Link> */}
-          <Link to="/contact">
-            <button
-              className={
-                location.pathname === "/contact" ? styles.activeRoute : ""
-              }
-            >
-              Contact
-            </button>
-          </Link>
           <button
             className={styles.instagramIcon}
             onClick={() =>
-              window.open("//www.instagram.com/l7nne4rth/", "_blank")
+              window.open("//www.instagram.com/1_ynn3.4rt.h/", "_blank")
             }
           >
             <InstagramIcon fontSize="large" />

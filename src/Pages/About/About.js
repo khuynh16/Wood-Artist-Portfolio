@@ -1,4 +1,5 @@
 import Navbar from "../../Components/Navbar/Navbar";
+import Newsletter from "../../Components/Newsletter/Newsletter";
 import styles from "./About.module.css";
 import { useState } from "react";
 import about_pic from "../../Assets/Images/About.jpg";
@@ -407,6 +408,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      <Newsletter />
     </>
   );
 };

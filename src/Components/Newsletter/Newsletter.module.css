@@ -1,0 +1,135 @@
+.outerContainer {
+  width: 100%;
+  min-height: 200px;
+  height: auto;
+  background-color: #34495e;
+}
+
+.innerContainer {
+  width: auto;
+  max-width: 600px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+.title {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 2rem;
+  color: white;
+}
+
+.image {
+  width: 6rem;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.emdash {
+  width: 50px; /* or auto */
+  height: 2px;
+  background-color: white;
+  margin: 0 auto;
+}
+
+.description {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  color: white;
+  margin-top: 2em;
+  margin-bottom: 3em;
+  text-align: center;
+}
+
+.emailInput {
+  font-size: 1.3em;
+}
+
+.emailInput::placeholder {
+  font-style: italic;
+  color: #888;
+  opacity: 1; /* ensures consistent rendering across browsers */
+}
+
+input[type="email"] {
+  width: 100%;
+  max-width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  box-shadow:
+    rgb(9 30 66 / 25%) 0px 1px 1px,
+    rgb(9 30 66 / 13%) 0px 0px 1px 1px;
+}
+
+@media screen and (max-width: 768px) {
+  .innerContainer {
+    max-width: 80%;
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+
+  .image {
+    width: 4rem;
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .titleRow {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .description {
+    font-size: 1.1rem;
+  }
+
+  .emdash {
+    /* display: none; */
+  }
+
+  input[type="email"] {
+    font-size: 1rem;
+  }
+
+  .mailingListButton {
+    font-size: 1rem !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .emdash {
+    width: 25px;
+  }
+
+  .image {
+    width: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .emdash {
+    width: 25px;
+  }
+
+  .innerContainer {
+    max-width: 90%;
+  }
+}
