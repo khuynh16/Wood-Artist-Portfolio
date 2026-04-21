@@ -7,7 +7,7 @@ const Gallery = () => {
     <>
       <Navbar />
       <MainGalleryView />
-      <Newsletter />
+      <Newsletter description="Get notified when I share new pieces and exhibitions." />
     </>
   );
 };

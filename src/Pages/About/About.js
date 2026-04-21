@@ -408,7 +408,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <Newsletter />
+      <Newsletter description="Get updates on new pieces, exhibitions, and what I’m working on." />
     </>
   );
 };

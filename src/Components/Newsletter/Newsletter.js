@@ -4,7 +4,7 @@ import newsletterIcon from "../../Assets/Images/NewsletterIcon.png";
 import { useState } from "react";
 import axios from "axios";
 
-const Newsletter = () => {
+const Newsletter = ({ description }) => {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [email, setEmail] = useState("");
 
@@ -43,9 +43,7 @@ const Newsletter = () => {
               loading="lazy"
             />
           </div>
-          <p className={styles.description}>
-            Get notified when I share new pieces and exhibitions.
-          </p>
+          <p className={styles.description}>{description}</p>
           <input
             className={styles.emailInput}
             type="email"
