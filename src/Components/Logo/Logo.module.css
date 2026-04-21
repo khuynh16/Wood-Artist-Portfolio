@@ -20,3 +20,15 @@
     width: 7rem;
   }
 }
+
+@media screen and (max-width: 1300px) {
+  .logo {
+    margin-left: 3.3vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    margin-left: 4.3vw;
+  }
+}
