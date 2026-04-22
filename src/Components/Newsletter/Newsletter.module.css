@@ -1,6 +1,6 @@
 .outerContainer {
   width: 100%;
-  min-height: 200px;
+  min-height: 40vh;
   height: auto;
   background-color: #34495e;
 }
@@ -76,6 +76,19 @@ input[type="email"] {
     rgb(9 30 66 / 13%) 0px 0px 1px 1px;
 }
 
+.successMessageText {
+  font-size: 1.3rem;
+  color: white;
+  text-align: center;
+  width: auto;
+  max-width: 600px;
+  padding-top: 2.5em;
+}
+
+.spacing {
+  gap: 2em;
+}
+
 @media screen and (max-width: 768px) {
   .innerContainer {
     max-width: 80%;
@@ -101,12 +114,12 @@ input[type="email"] {
     font-size: 1.1rem;
   }
 
-  .emdash {
-    /* display: none; */
-  }
-
   input[type="email"] {
     font-size: 1rem;
+  }
+
+  .successMessageText {
+    font-size: 1.1rem;
   }
 
   .mailingListButton {

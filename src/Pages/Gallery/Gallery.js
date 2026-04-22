@@ -7,7 +7,11 @@ const Gallery = () => {
     <>
       <Navbar />
       <MainGalleryView />
-      <Newsletter description="Get notified when I share new pieces and exhibitions." />
+      <Newsletter
+        description="Get notified when I share new pieces and exhibitions."
+        successMessage="In the meantime, feel free to keep looking around."
+        showGalleryButton={false}
+      />
     </>
   );
 };

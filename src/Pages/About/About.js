@@ -408,7 +408,11 @@ const About = () => {
           </div>
         </div>
       </div>
-      <Newsletter description="Get updates on new pieces, exhibitions, and what I’m working on." />
+      <Newsletter
+        description="Get updates on new pieces, exhibitions, and what I'm working on."
+        successMessage="In the meantime, feel free to look through my work."
+        showGalleryButton={true}
+      />
     </>
   );
 };
