@@ -4,11 +4,13 @@ import Box from "@mui/material/Box";
 import CircularProgress from "@mui/material/CircularProgress";
 import newsletterIcon from "../../Assets/Images/NewsletterIcon.png";
 import { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Newsletter = ({ description, successMessage, showGalleryButton }) => {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState("idle");
   const timerRef = useRef(null);
+  const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -76,6 +78,10 @@ const Newsletter = ({ description, successMessage, showGalleryButton }) => {
             </p>
             {showGalleryButton && (
               <Button
+                onClick={() => {
+                  navigate("/gallery");
+                  window.scrollTo(0, 0);
+                }}
                 className={styles.mailingListButton}
                 variant="contained"
                 sx={{
