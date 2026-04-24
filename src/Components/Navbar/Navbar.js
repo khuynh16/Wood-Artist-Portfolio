@@ -1,6 +1,6 @@
 import { Outlet, Link, useLocation } from "react-router-dom";
 import styles from "./Navbar.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import ReusableLogo from "../../Components/Logo/Logo";
@@ -8,6 +8,10 @@ import ReusableLogo from "../../Components/Logo/Logo";
 const Navbar = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    document.body.style.overflow = isNavExpanded ? "hidden" : "auto";
+  }, [isNavExpanded]);
 
   return (
     <>

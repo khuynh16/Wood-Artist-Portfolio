@@ -48,7 +48,7 @@ ul {
 }
 
 .hamburgerHomePageStyling {
-  width: 35px;
+  width: 40px;
   height: 1.5rem;
   display: none;
   flex-direction: column;
@@ -138,6 +138,10 @@ button {
 }
 
 @media screen and (max-width: 767px) {
+  .navLinksContainer {
+    width: 0;
+  }
+
   .navLinksContainer button {
     display: none;
   }

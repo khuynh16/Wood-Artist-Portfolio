@@ -17,7 +17,7 @@
 
 @media screen and (max-width: 1440px) {
   .logo {
-    width: 7rem;
+    width: 6.5rem;
   }
 }
 
@@ -30,5 +30,6 @@
 @media screen and (max-width: 768px) {
   .logo {
     margin-left: 4.3vw;
+    width: 5rem;
   }
 }
