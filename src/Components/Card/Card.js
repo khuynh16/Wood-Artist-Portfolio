@@ -4,7 +4,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import justPictures from "../Artworks/Artworks";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./Card.module.css";
 import { Fancybox } from "@fancyapps/ui"; // while not used, needed to run the fancybox image carousel??
 
@@ -16,6 +16,10 @@ const Card = () => {
   const [currentPicturesArray, setCurrentPicturesArray] = useState(
     justMainCategoryPictures,
   );
+
+  useEffect(() => {
+    Fancybox.bind("[data-fancybox]", {});
+  }, []);
 
   return (
     <>

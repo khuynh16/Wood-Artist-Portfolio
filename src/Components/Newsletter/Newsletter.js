@@ -3,33 +3,55 @@ import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import CircularProgress from "@mui/material/CircularProgress";
 import newsletterIcon from "../../Assets/Images/NewsletterIcon.png";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Newsletter = ({ description, successMessage, showGalleryButton }) => {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState("idle");
-  const timerRef = useRef(null);
+
   const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
     if (!email) return;
 
     try {
       setStatus("loading");
 
-      // simulate request (replace with real API later)
-      timerRef.current = setTimeout(() => {
-        setStatus("success");
-      }, 1500);
+      const startTime = Date.now();
 
-      // Example real request:
-      // await axios.post("your-endpoint", { email });
-    } catch (error) {
-      console.log(error);
-      setStatus("idle");
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await res.json();
+
+      const elapsed = Date.now() - startTime;
+      const remaining = 1500 - elapsed;
+
+      if (remaining > 0) {
+        await new Promise((resolve) => setTimeout(resolve, remaining));
+      }
+
+      // SUCCESS or ALREADY SUBSCRIBED
+      if (data.success) {
+        if (data.status === "already_subscribed") {
+          setStatus("already_subscribed");
+        } else {
+          setStatus("success");
+        }
+        return;
+      }
+
+      // ERROR
+      setStatus("error");
+    } catch (err) {
+      setStatus("error");
     }
   };
 
@@ -54,7 +76,7 @@ const Newsletter = ({ description, successMessage, showGalleryButton }) => {
           />
         </div>
 
-        {/* LOADING STATE */}
+        {/* LOADING */}
         {status === "loading" && (
           <Box
             sx={{
@@ -68,14 +90,16 @@ const Newsletter = ({ description, successMessage, showGalleryButton }) => {
           </Box>
         )}
 
-        {/* SUCCESS STATE */}
+        {/* SUCCESS */}
         {status === "success" && (
           <div className={styles.successMessageContainer}>
             <p className={styles.successMessageText}>
-              You're all set! A confirmation email has been sent to you, just
-              letting you know you've been added to the mailing list.<br></br>
-              <br></br> {successMessage}
+              You're all set! A confirmation email has been sent.
+              <br />
+              <br />
+              {successMessage}
             </p>
+
             {showGalleryButton && (
               <Button
                 onClick={() => {
@@ -101,7 +125,49 @@ const Newsletter = ({ description, successMessage, showGalleryButton }) => {
           </div>
         )}
 
-        {/* FORM STATE */}
+        {/* ALREADY SUBSCRIBED */}
+        {status === "already_subscribed" && (
+          <div className={styles.successMessageContainer}>
+            <p className={styles.successMessageText}>
+              You're already subscribed to the mailing list -- thank you!
+              <br />
+              <br />
+              {successMessage}
+            </p>
+
+            {showGalleryButton && (
+              <Button
+                onClick={() => {
+                  navigate("/gallery");
+                  window.scrollTo(0, 0);
+                }}
+                className={styles.mailingListButton}
+                variant="contained"
+                sx={{
+                  fontFamily: "Roboto Condensed, sans-serif",
+                  fontWeight: "bold",
+                  fontSize: "1.3rem",
+                  mt: "1rem",
+                  textTransform: "capitalize",
+                  width: "100%",
+                  marginTop: "2em",
+                }}
+              >
+                To Gallery
+                <span style={{ marginLeft: "8px" }}>→</span>
+              </Button>
+            )}
+          </div>
+        )}
+
+        {/* ERROR */}
+        {status === "error" && (
+          <p style={{ color: "red", textAlign: "center" }}>
+            Something went wrong. Please try again.
+          </p>
+        )}
+
+        {/* FORM */}
         {status === "idle" && (
           <form onSubmit={handleSubmit}>
             <p className={styles.description}>{description}</p>
