@@ -3,73 +3,107 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
-import justPictures from "../Artworks/Artworks";
 import { useState, useEffect } from "react";
 import styles from "./Card.module.css";
-import { Fancybox } from "@fancyapps/ui"; // while not used, needed to run the fancybox image carousel??
+import { Fancybox } from "@fancyapps/ui";
+
+import ArtworksData, { getCategoryPictures } from "../Artworks/Artworks";
 
 const Card = () => {
-  const [selectedArtworkName, setSelectedArtworkName] = useState("");
-  const justMainCategoryPictures = justPictures.filter(
-    (picture) => picture.isCategoryPic === true,
-  );
-  const [currentPicturesArray, setCurrentPicturesArray] = useState(
-    justMainCategoryPictures,
-  );
+  const [mode, setMode] = useState("categories");
+  const [selectedArtwork, setSelectedArtwork] = useState(null);
+  const [pictures, setPictures] = useState(getCategoryPictures());
 
   useEffect(() => {
+    // Bind to elements that are rendered as <a> tags (subgallery mode)
     Fancybox.bind("[data-fancybox]", {});
-  }, []);
+
+    return () => {
+      Fancybox.destroy();
+    };
+  }, [pictures]);
+
+  const handleClick = (item) => {
+    // CASE 1: Has subgalleries (e.g., Thesis Exhibition) -> Drill down to new grid
+    if (item.subGalleries?.length > 0) {
+      setSelectedArtwork(item.name);
+
+      const subGalleryFlattened = item.subGalleries.flatMap((g) =>
+        g.collectionOfPics.map((pic) => ({
+          ...pic,
+          name: g.name,
+          year: g.year,
+          medium: g.medium,
+          dimension: g.dimension,
+        })),
+      );
+
+      setPictures(subGalleryFlattened);
+      setMode("subgallery");
+    }
+
+    // CASE 2: Normal artwork (e.g., Serenity) -> Open Fancybox immediately with all images
+    else {
+      const fullArtwork = ArtworksData.find((a) => a.name === item.name);
+
+      if (fullArtwork && fullArtwork.collectionOfPics) {
+        // Map the collection to the format Fancybox.show() expects
+        const galleryItems = fullArtwork.collectionOfPics.map((pic) => ({
+          src: pic.original,
+          thumb: pic.thumbnail,
+          caption: `
+            <h2 style="display:flex;justify-content:center;padding-top:25px;font-style:italic">
+              ${fullArtwork.name}
+            </h2>
+            <h3 style="display:flex;justify-content:center;margin-top:20px">
+              ${fullArtwork.year || ""}
+            </h3>
+            <h3 style="display:flex;justify-content:center;align-items:center;text-align:center">
+              ${fullArtwork.medium || ""}
+            </h3>
+            <h3 style="display:flex;justify-content:center">
+              ${fullArtwork.dimension || ""}
+            </h3>
+          `,
+        }));
+
+        // Launch Fancybox manually with the array of images
+        Fancybox.show(galleryItems, {
+          infinite: true,
+        });
+      }
+    }
+  };
+
+  const isImageMode = mode === "subgallery";
 
   return (
     <>
-      {currentPicturesArray.map((artwork) => (
-        <MuiCard
-          sx={{
-            maxWidth: 345,
-            display: artwork.isCategoryPic === false ? "none" : "",
-          }}
-          key={artwork.thumbnail}
-          className={styles.card}
-        >
+      {pictures.map((artwork) => (
+        <MuiCard key={artwork.thumbnail} className={styles.card}>
           <CardActionArea
-            onClick={() => {
-              setSelectedArtworkName(artwork.name);
-              // once clicked, exchanges the array of only main category pictures
-              // with the array that has all pictures so Fancybox is able to load
-              // all images in each gallery category picture carousel
-              setCurrentPicturesArray(justPictures);
-              // setTimeout(function () {
-              //   const tes =
-              //     document.getElementsByClassName("fancybox__slide")[0];
-              //   // console.log(tes);
-
-              //   const imge =
-              //     document.getElementsByClassName("fancybox__image")[0];
-
-              //   imge.style.cssText += "margin-left: 20vw";
-
-              //   tes.style.cssText += "display:flex;flex-direction:row";
-              // }, 500);
-            }}
-            data-fancybox={
-              selectedArtworkName === artwork.name ? "gallery" : ""
-            }
-            href={artwork.original}
-            data-caption={
-              "<h2 style='display: flex; justify-content: center; padding-top: 25px; font-style: italic'>" +
-              artwork.name +
-              "<h2>" +
-              "<h3 style='display: flex; justify-content: center; margin-top: 20px'>" +
-              artwork.year +
-              "<h3>" +
-              "<h3 style='display: flex; justify-content: center; align-items: center; text-align: center'>" +
-              artwork.medium +
-              "<h3>" +
-              "<h3 style='display: flex; justify-content: center;'>" +
-              artwork.dimension +
-              "<h3>"
-            }
+            // In categories mode, we stay as a div to handle the logic manually
+            // In subgallery mode, we become an <a> for Fancybox auto-binding
+            component={isImageMode ? "a" : "div"}
+            onClick={() => handleClick(artwork)}
+            {...(isImageMode && {
+              href: artwork.original,
+              "data-fancybox": selectedArtwork || "gallery",
+              "data-caption": `
+                <h2 style="display:flex;justify-content:center;padding-top:25px;font-style:italic">
+                  ${artwork.name}
+                </h2>
+                <h3 style="display:flex;justify-content:center;margin-top:20px">
+                  ${artwork.year}
+                </h3>
+                <h3 style="display:flex;justify-content:center;align-items:center;text-align:center">
+                  ${artwork.medium}
+                </h3>
+                <h3 style="display:flex;justify-content:center">
+                  ${artwork.dimension}
+                </h3>
+              `,
+            })}
           >
             <CardMedia
               component="img"
@@ -77,6 +111,7 @@ const Card = () => {
               alt={artwork.name}
               src={artwork.thumbnail}
             />
+
             <CardContent className={styles.cardTextBody}>
               <Typography
                 className={styles.cardText}

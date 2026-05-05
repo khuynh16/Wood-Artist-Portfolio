@@ -1,6 +1,54 @@
 const ArtworksData = [
   {
+    name: "Thesis Exhibition",
+    isCategoryPic: true,
+    thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Serenity/categoryPic.jpg"),
+    hasSubGallery: true,
+    subGalleries: [
+      {
+        name: "Part 1",
+        year: "2030.",
+        medium: "Test Medium 1.",
+        dimension: '25" x 25" x 25".',
+        collectionOfPics: [
+          {
+            thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Serenity/categoryPic.jpg"),
+            original: require("../../Assets/Images/ArtImages/Originals/Serenity/categoryPic.jpg"),
+            isCategoryPic: true,
+          },
+        ],
+      },
+      {
+        name: "Part 2",
+        year: "2050.",
+        medium: "Test Medium 2.",
+        dimension: '25" x 25" x 25".',
+        collectionOfPics: [
+          {
+            thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Serenity/categoryPic.jpg"),
+            original: require("../../Assets/Images/ArtImages/Originals/Serenity/categoryPic.jpg"),
+            isCategoryPic: true,
+          },
+        ],
+      },
+      {
+        name: "Part 3",
+        year: "2222.",
+        medium: "Test Medium 2.",
+        dimension: '25" x 25" x 25".',
+        collectionOfPics: [
+          {
+            thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Serenity/categoryPic.jpg"),
+            original: require("../../Assets/Images/ArtImages/Originals/Serenity/categoryPic.jpg"),
+            isCategoryPic: true,
+          },
+        ],
+      },
+    ],
+  },
+  {
     name: "Serenity",
+    thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Serenity/categoryPic.jpg"),
     year: "2024.",
     medium: "Joinery Mixed Media. Patterned Wood and Etching. Acrylic.",
     dimension: '23" x 12" x 23".',
@@ -49,6 +97,7 @@ const ArtworksData = [
   },
   {
     name: "Absurdity",
+    thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Absurdity/categoryPic.jpg"),
     year: "2024.",
     medium: "Joinery Mixed Media. Patterned Wood and Etching. Acrylic.",
     dimension: '14" x 10" x 16".',
@@ -87,6 +136,7 @@ const ArtworksData = [
   },
   {
     name: "Vitality",
+    thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Vitality/categoryPic.jpg"),
     year: "2023.",
     medium: "Mixed Media.",
     dimension: '10" x 9" x 10". 9" x 7" x 9".',
@@ -125,6 +175,7 @@ const ArtworksData = [
   },
   {
     name: "Bamboo Glass Ceiling",
+    thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/BambooGlassCeiling/categoryPic.jpg"),
     year: "2023.",
     medium: "Resin Casting; Yarns; Star Anise; Laminate Wood Sculpture.",
     dimension: '13" x 13" x 23 1/2".',
@@ -178,6 +229,7 @@ const ArtworksData = [
   },
   {
     name: "Song Hành",
+    thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/SongHành/categoryPic.jpg"),
     year: "2023.",
     medium: "Mixed Media.",
     dimension: '11" x 11".',
@@ -201,6 +253,7 @@ const ArtworksData = [
   },
   {
     name: "Pop 'n' Drop",
+    thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/PopNDrop/categoryPic.jpg"),
     year: "2023.",
     medium: "Hybrid Print on Silk; Wood Joinery; Laminate Wood Sculpture.",
     dimension: '36" x 10" x 2".',
@@ -219,6 +272,7 @@ const ArtworksData = [
   },
   {
     name: "Untitled",
+    thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Untitled/categoryPic.jpg"),
     year: "2023.",
     medium: "Laminate Wood Sculpture.",
     dimension: '3" x 3" x 4.5".',
@@ -242,6 +296,7 @@ const ArtworksData = [
   },
   {
     name: "Hermit Crab",
+    thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/HermitCrab/categoryPic.jpg"),
     year: "2023.",
     medium:
       "Fabrid; Monofilament Fishing Line; Push Pins; Laminate; Kinetic Wood Sculpture.",
@@ -291,6 +346,7 @@ const ArtworksData = [
   },
   {
     name: "Recess",
+    thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Recess/categoryPic.jpg"),
     year: "2023.",
     medium: "Resin Casting; Laminate Wood Sculpture.",
     dimension: '9" x 6 1/2" x 3 1/8".',
@@ -339,6 +395,7 @@ const ArtworksData = [
   },
   {
     name: "Beat the Clock",
+    thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/BeatTheClock/categoryPic.jpg"),
     year: "2023.",
     medium: "Laminating Wood; Crystal Marbles; Resin.",
     dimension: '11" x 11" x 42".',
@@ -382,6 +439,7 @@ const ArtworksData = [
   },
   {
     name: "Missing Creator",
+    thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/MissingCreator/categoryPic.jpg"),
     year: "2022.",
     medium: "Printed on Laminated Joinery Wood Sculpture.",
     dimension: "Dimensions: To Be Determined.",
@@ -405,6 +463,7 @@ const ArtworksData = [
   },
   {
     name: "Anachronism",
+    thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Anachronism/categoryPic.jpg"),
     year: "2022.",
     medium: "Laminating Wood.",
     dimension: "Varied Dimensions.",
@@ -468,6 +527,7 @@ const ArtworksData = [
   },
   {
     name: "How?",
+    thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/How/categoryPic.jpg"),
     year: "2022.",
     medium: "Wood Joinery; Resin Casting; Print Technique.",
     dimension: '20" x 20" x 25".',
@@ -526,6 +586,7 @@ const ArtworksData = [
   },
   {
     name: "Where?",
+    thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Where/categoryPic.jpg"),
     year: "2022.",
     medium: "Wood Joinery; Laser Cutting on Plexiglass and Wood; Mixed Media.",
     dimension: '11" x 1.5" x 11" and 10" x 1.5" x 10".',
@@ -564,6 +625,7 @@ const ArtworksData = [
   },
   {
     name: "What?",
+    thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/What/categoryPic.jpg"),
     year: "2022.",
     medium: "Wood Joinery; Blue Lapis Crystal; Lamination; Mixed Media.",
     dimension: '12.5" x 1.5" x 17".',
@@ -587,6 +649,7 @@ const ArtworksData = [
   },
   {
     name: "Why?",
+    thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Why/categoryPic.jpg"),
     year: "2022.",
     medium: "Wood Joinery; Lamination; Mixed Media.",
     dimension: '18" x 20" x 34".',
@@ -610,6 +673,7 @@ const ArtworksData = [
   },
   {
     name: "Harmonizing",
+    thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Harmonizing/categoryPic.jpg"),
     year: "2021.",
     medium: "Wood Joinery; Levitation; Mixed Media.",
     dimension: '30" x 26" x 15".',
@@ -698,6 +762,7 @@ const ArtworksData = [
   },
   {
     name: "Beginning-Ending",
+    thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Beginning-Ending/categoryPic.jpg"),
     year: "2021.",
     medium: "Wood Joinery; Augmented Reality; Mixed Media.",
     dimension: '27" x 24" x 75".',
@@ -751,6 +816,7 @@ const ArtworksData = [
   },
   {
     name: "Ordinary, Yet Original",
+    thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/OrdinaryYetOriginal/categoryPic.jpg"),
     year: "2021.",
     medium: "Wood Joinery; Levitation; Lamination; Mixed Media.",
     dimension: '28" x 18" x 36".',
@@ -774,6 +840,7 @@ const ArtworksData = [
   },
   {
     name: "Forma",
+    thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Forma/categoryPic.jpg"),
     year: "2021.",
     medium: "Wood.",
     dimension: '12" x 9" x 12".',
@@ -787,6 +854,7 @@ const ArtworksData = [
   },
   {
     name: "Bud",
+    thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Bud/categoryPic.jpg"),
     year: "2019.",
     medium: "Mixed Media.",
     dimension: '24" x 25" x 24".',
@@ -805,17 +873,39 @@ const ArtworksData = [
   },
 ];
 
-const justPictures = [];
+export default ArtworksData;
 
-// logic that takes the above array of gallery image data and just includes the image objects
-ArtworksData.map((artwork) =>
-  artwork.collectionOfPics.forEach((currentPicture, i) => {
-    currentPicture["name"] = artwork.name;
-    currentPicture["year"] = artwork.year;
-    currentPicture["medium"] = artwork.medium;
-    currentPicture["dimension"] = artwork.dimension;
-    justPictures.push(currentPicture);
-  }),
-);
+/**
+ * FLATTENED VERSION (safe, no mutation)
+ */
+export const getFlattenedPictures = () => {
+  const flat = [];
 
-export default justPictures;
+  ArtworksData.forEach((artwork) => {
+    artwork.collectionOfPics?.forEach((pic) => {
+      flat.push({
+        ...pic,
+        name: artwork.name,
+        year: artwork.year,
+        medium: artwork.medium,
+        dimension: artwork.dimension,
+        isCategoryPic: pic.isCategoryPic ?? false,
+      });
+    });
+  });
+
+  return flat;
+};
+
+/**
+ * CATEGORY ROOTS ONLY (for grid view)
+ */
+
+// filter((a) => a.isCategoryPic)
+export const getCategoryPictures = () =>
+  ArtworksData.map((a) => ({
+    name: a.name,
+    thumbnail: a.thumbnail,
+    hasSubGallery: a.hasSubGallery,
+    subGalleries: a.subGalleries,
+  }));
