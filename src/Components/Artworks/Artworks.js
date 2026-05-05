@@ -1,5 +1,60 @@
 const ArtworksData = [
   {
+    name: "Thesis Exhibition",
+    year: "2026.",
+    medium: "Mixed Media.",
+    dimension: '147" x 258" x 144".',
+    collectionOfPics: [
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/categoryPic.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/categoryPic.jpg"),
+        isCategoryPic: true,
+        photographerDetails: "Photo taken by: Elle Jones",
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/6.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/6.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/1.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/1.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/2.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/2.jpg"),
+        isCategoryPic: false,
+        photographerDetails: "Photo taken by: Joshua Able-Carter",
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/3.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/3.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/4.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/4.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/5.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/5.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/7.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/7.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/8.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/8.jpg"),
+        isCategoryPic: false,
+      },
+    ],
+  },
+  {
     name: "Serenity",
     year: "2024.",
     medium: "Joinery Mixed Media. Patterned Wood and Etching. Acrylic.",

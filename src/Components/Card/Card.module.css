@@ -68,7 +68,7 @@
 .card {
   opacity: 0;
   animation: appear 0.3s ease-out forwards;
-  animation-delay: calc(var(--nth-child) * 0.1s);
+  /* animation-delay: calc(var(--nth-child) * 0.1s); */
 }
 
 .card:hover {
