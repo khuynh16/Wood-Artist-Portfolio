@@ -13,7 +13,7 @@
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(3, auto);
-  grid-gap: 60px;
+  grid-gap: 40px;
   padding-bottom: 15vh;
   overflow: visible;
   box-sizing: border-box;
@@ -23,7 +23,7 @@
   width: 400px;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1450px) {
   .innerContainer {
     grid-template-columns: repeat(2, auto);
   }
@@ -32,11 +32,19 @@
 @media screen and (max-width: 1000px) {
   .innerContainer {
     grid-template-columns: repeat(1, auto);
+    grid-gap: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .outerContainer {
+    padding-top: 0;
   }
 }
 
 @media screen and (max-width: 500px) {
   .innerContainer > * {
-    width: 250px;
+    width: auto;
+    max-width: 350px !important;
   }
 }

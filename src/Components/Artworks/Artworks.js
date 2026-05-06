@@ -55,6 +55,87 @@ const ArtworksData = [
     ],
   },
   {
+    name: "Ngẫu Hứng",
+    year: "2025.",
+    medium: "Mixed Media.",
+    dimension: '24" x 9" x 30".',
+    collectionOfPics: [
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/NgẫuHứng/categoryPic.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/NgẫuHứng/categoryPic.jpg"),
+        isCategoryPic: true,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/NgẫuHứng/1.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/NgẫuHứng/1.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/NgẫuHứng/2.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/NgẫuHứng/2.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/NgẫuHứng/3.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/NgẫuHứng/3.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/NgẫuHứng/4.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/NgẫuHứng/4.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/NgẫuHứng/5.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/NgẫuHứng/5.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/NgẫuHứng/6.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/NgẫuHứng/6.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/NgẫuHứng/7.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/NgẫuHứng/7.jpg"),
+        isCategoryPic: false,
+      },
+    ],
+  },
+  {
+    name: "Memory Captor",
+    year: "2025.",
+    medium: "Mixed Media.",
+    dimension: '24" x 9" x 30".',
+    collectionOfPics: [
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/MemoryCaptor/categoryPic.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/MemoryCaptor/categoryPic.jpg"),
+        isCategoryPic: true,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/MemoryCaptor/1.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/MemoryCaptor/1.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/MemoryCaptor/2.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/MemoryCaptor/2.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/MemoryCaptor/3.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/MemoryCaptor/3.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/MemoryCaptor/4.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/MemoryCaptor/4.jpg"),
+        isCategoryPic: false,
+      },
+    ],
+  },
+  {
     name: "Serenity",
     year: "2024.",
     medium: "Joinery Mixed Media. Patterned Wood and Etching. Acrylic.",

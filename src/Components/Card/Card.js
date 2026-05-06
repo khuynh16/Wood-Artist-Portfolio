@@ -32,7 +32,7 @@ const Card = () => {
             key={index}
             className={styles.card}
             sx={{
-              maxWidth: 345,
+              maxWidth: 500,
               // Only the "Category" pictures are visible as cards on the page
               display: artwork.isCategoryPic ? "block" : "none",
               margin: "10px",
@@ -66,7 +66,7 @@ const Card = () => {
             >
               <CardMedia
                 component="img"
-                height="250"
+                height="350"
                 alt={artwork.name}
                 src={artwork.thumbnail}
               />
