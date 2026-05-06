@@ -15,6 +15,7 @@ const ArtworksData = [
         thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/6.jpg"),
         original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/6.jpg"),
         isCategoryPic: false,
+        photographerDetails: "Designed by: Julie Sayo",
       },
       {
         thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/1.jpg"),
