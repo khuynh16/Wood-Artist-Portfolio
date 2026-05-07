@@ -47,8 +47,8 @@
 }
 
 .mainContent {
-  padding: 4rem;
-  padding-bottom: 15vh;
+  /* top - right - bottom - left */
+  padding: 2vh 4rem 15vh 4rem;
 }
 
 .artistStatement,
@@ -183,7 +183,7 @@ h4 {
 
   .mainContent {
     padding: 2rem;
-    padding-top: 1.5rem;
+    padding-top: 0;
     padding-bottom: 15vh;
   }
 
