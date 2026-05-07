@@ -240,7 +240,10 @@ const Exhibitions = () => {
                   </li>
                   <li>
                     Sadat Art for Peace 2023 Competition at Herman Maril Gallery
-                    | College Park, MD
+                    | College Park, MD |{" "}
+                    <b>
+                      <i>Honorable Mention Award</i>
+                    </b>
                   </li>
                   <li>
                     Honor Thesis Show at Herman Maril Gallery | College Park, MD

@@ -49,7 +49,7 @@
 
 .mainContent {
   /* top - right - bottom - left */
-  padding: 2vh 4rem 15vh 4rem;
+  padding: 4vh 4rem 10vh 4rem;
 }
 
 .artistStatement,
@@ -185,7 +185,7 @@ h4 {
   .mainContent {
     padding: 2rem;
     padding-top: 0;
-    padding-bottom: 15vh;
+    padding-bottom: 10vh;
   }
 
   .academicAchievements,

@@ -13,7 +13,7 @@
 
 .mainContent {
   /* top - right - bottom - left */
-  padding: 2vh 4rem 15vh 4rem;
+  padding: 4vh 4rem 15vh 4rem;
 }
 
 .bannerText {
@@ -28,7 +28,43 @@
   flex-direction: column;
   align-items: flex-start;
   font-size: 1.5rem;
-  gap: 2rem;
+  gap: 2.5rem;
+  padding-top: 2em;
+}
+
+.exhibitionYearButton {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: blue;
+  cursor: pointer;
+}
+
+.exhibitions2021,
+.exhibitions2022,
+.exhibitions2023,
+.exhibitions2024,
+.exhibitions2025,
+.exhibitions2026 {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.latestExhibitionYear {
+  border-bottom: 2px solid blue;
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 2px solid blue;
+}
+
+.arrow {
+  font-size: 0.8rem;
 }
 
 @media screen and (max-width: 1440px) {
@@ -41,11 +77,35 @@
   .bannerText {
     font-size: 2.5rem;
     text-align: center;
+    padding-bottom: 1rem;
   }
 
   .mainContent {
     padding: 2rem;
     padding-top: 0;
     padding-bottom: 15vh;
+  }
+
+  .exhibitionYearButtons {
+    font-size: 1rem;
+  }
+
+  .exhibitions2021,
+  .exhibitions2022,
+  .exhibitions2023,
+  .exhibitions2024,
+  .exhibitions2025,
+  .exhibitions2026 {
+    margin-left: -1.3rem;
+  }
+
+  .exhibitionYearButtons {
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .bannerText {
+    font-size: 2rem;
   }
 }
