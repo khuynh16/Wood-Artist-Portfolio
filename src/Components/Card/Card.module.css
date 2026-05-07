@@ -69,7 +69,15 @@
   opacity: 0;
   animation: appear 0.3s ease-out forwards;
   margin: 10px;
+  width: 100%;
+  max-width: 400px;
   /* animation-delay: calc(var(--nth-child) * 0.1s); */
+}
+
+@media screen and (max-width: 500px) {
+  .card {
+    max-width: 350px;
+  }
 }
 
 .card:hover {

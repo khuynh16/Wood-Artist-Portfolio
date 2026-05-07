@@ -1,6 +1,7 @@
 import MuiCard from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
+import Skeleton from "@mui/material/Skeleton";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import { useState, useEffect } from "react";
@@ -188,49 +189,72 @@ const Card = ({ initialArtworkSlug }) => {
 
   return (
     <>
-      {pictures.map((artwork) => (
-        <MuiCard key={artwork.thumbnail} className={styles.card}>
-          <CardActionArea
-            // Always use div and handleClick for subgallery cards
-            // Regular category cards also use div with handleClick
-            component="div"
-            onClick={() => handleClick(artwork)}
-          >
-            <CardMedia
-              component="img"
-              height="350"
-              alt={artwork.name}
-              src={artwork.thumbnail}
-              loading="lazy"
-              decoding="async"
-              onLoad={() =>
-                setLoadedImages((prev) => ({
-                  ...prev,
-                  [artwork.thumbnail]: true,
-                }))
-              }
-              style={{
-                filter: loadedImages[artwork.thumbnail] ? "none" : "blur(5px)",
-                transition: "filter 300ms ease-out",
-                backgroundColor: "#f5f5f5",
-              }}
-            />
+      {pictures.map((artwork) => {
+        const imageLoaded = loadedImages[artwork.thumbnail];
 
-            <CardContent className={styles.cardTextBody}>
-              <Typography
-                className={styles.cardText}
-                variant="h5"
-                component="div"
-                align="center"
-                fontFamily="Roboto, sans-serif"
-                fontWeight="500"
-              >
-                {artwork.name}
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </MuiCard>
-      ))}
+        return (
+          <MuiCard
+            key={artwork.thumbnail}
+            className={styles.card}
+            style={{
+              opacity: imageLoaded ? 1 : 0.65,
+              transition: "opacity 250ms ease-out",
+            }}
+          >
+            <CardActionArea
+              // Always use div and handleClick for subgallery cards
+              // Regular category cards also use div with handleClick
+              component="div"
+              onClick={() => handleClick(artwork)}
+            >
+              <CardMedia
+                component="img"
+                height="350"
+                alt={artwork.name}
+                src={artwork.thumbnail}
+                loading="lazy"
+                decoding="async"
+                onLoad={() =>
+                  setLoadedImages((prev) => ({
+                    ...prev,
+                    [artwork.thumbnail]: true,
+                  }))
+                }
+                style={{
+                  width: "100%",
+                  display: "block",
+                  objectFit: "cover",
+                  filter: imageLoaded ? "none" : "blur(5px)",
+                  transition: "filter 300ms ease-out",
+                  backgroundColor: "#f5f5f5",
+                }}
+              />
+
+              <CardContent className={styles.cardTextBody}>
+                {imageLoaded ? (
+                  <Typography
+                    className={styles.cardText}
+                    variant="h5"
+                    component="div"
+                    align="center"
+                    fontFamily="Roboto, sans-serif"
+                    fontWeight="500"
+                  >
+                    {artwork.name}
+                  </Typography>
+                ) : (
+                  <Skeleton
+                    variant="text"
+                    width="60%"
+                    height={32}
+                    sx={{ margin: "0 auto" }}
+                  />
+                )}
+              </CardContent>
+            </CardActionArea>
+          </MuiCard>
+        );
+      })}
     </>
   );
 };
