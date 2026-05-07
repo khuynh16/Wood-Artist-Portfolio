@@ -3,6 +3,7 @@ import Newsletter from "../../Components/Newsletter/Newsletter";
 import styles from "./About.module.css";
 import { useState } from "react";
 import about_pic from "../../Assets/Images/About.jpg";
+import about_with_signature_pic from "../../Assets/Images/About-with-signature.jpg";
 
 const About = () => {
   const [open, setOpen] = useState({
@@ -34,7 +35,7 @@ const About = () => {
               The Story and Journey.
             </p>
             <img
-              src={about_pic}
+              src={about_with_signature_pic}
               alt="example"
               className={styles.image}
               loading="lazy"
