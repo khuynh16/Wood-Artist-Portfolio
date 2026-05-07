@@ -79,7 +79,7 @@ const Card = ({ initialArtworkSlug }) => {
   const handleClick = (item) => {
     // CASE 1: Has subgalleries (e.g., Thesis Exhibition) -> Drill down to new grid
     if (item.subGalleries?.length > 0) {
-      navigate(`/${slugify(item.name)}`);
+      navigate(`/gallery/${slugify(item.name)}`);
       setSelectedArtwork(item.name);
 
       // Create one card per subgallery instead of flattening all images
