@@ -42,6 +42,16 @@ const ArtworksData = [
             isCategoryPic: false,
             hideDimension: true,
           },
+          {
+            thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/9.jpg"),
+            original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/9.jpg"),
+            isCategoryPic: false,
+          },
+          {
+            thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/10.jpg"),
+            original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/10.jpg"),
+            isCategoryPic: false,
+          },
         ],
       },
       {
@@ -63,6 +73,21 @@ const ArtworksData = [
             original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/7.jpg"),
             isCategoryPic: false,
           },
+          {
+            thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/13.jpg"),
+            original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/13.jpg"),
+            isCategoryPic: false,
+          },
+          {
+            thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/14.jpg"),
+            original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/14.jpg"),
+            isCategoryPic: false,
+          },
+          {
+            thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/15.jpg"),
+            original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/15.jpg"),
+            isCategoryPic: false,
+          },
         ],
       },
       {
@@ -76,6 +101,16 @@ const ArtworksData = [
             thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/8.jpg"),
             original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/8.jpg"),
             isCategoryPic: true,
+          },
+          {
+            thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/11.jpg"),
+            original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/11.jpg"),
+            isCategoryPic: false,
+          },
+          {
+            thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/12.jpg"),
+            original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/12.jpg"),
+            isCategoryPic: false,
           },
         ],
       },
