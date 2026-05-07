@@ -137,9 +137,44 @@ const About = () => {
                 2026
               </button>
               <ul className={styles.exhibitions2026}>
-                <li>Example Gallery 1 | Example City, MD</li>
-                <li>Example Gallery 2 | Example City, MD</li>
-                <li>Example Gallery 3 | Example City, MD</li>
+                <li>
+                  Women Artists of the DMV Exhibition at Falls Church Arts
+                  Gallery | Panelist in one of 19 venues of Women Artists of the
+                  DMV | Falls Church, VA
+                </li>
+                <li>
+                  <i>April 1st - 18th</i> | 2026 IMDA MFA Thesis Exhibition:{" "}
+                  <b>
+                    <i>Despite / Bất Chấp</i>
+                  </b>{" "}
+                  at the Center for Art Design and Visual Culture (CADVC)
+                  Gallery, UMBC | Baltimore, MD
+                </li>
+                <li>
+                  <i>April 13th</i> | 2026 IMDA MFA Thesis Defense at the CADVC
+                  Gallery | Baltimore, MD
+                </li>
+                <li>
+                  'From the Madness' Exhibition at the Interlude Gallery, Fine
+                  Arts Building, UMBC | Baltimore, MD
+                </li>
+                <li>
+                  Art Vendor of the Interlude's Art Market at UMBC Amphitheater
+                  | Baltimore, MD
+                </li>
+                <li>
+                  2026 Asia North Exhibition: Shoes at the Door in Baltimore's
+                  Station North Arts District | Baltimore, MD
+                </li>
+                <li>
+                  The Polar Ice Museum from Greenland to South Baltimore at the
+                  Imaging Research Center (IRC), UMBC | Baltimore, MD
+                </li>
+                <li>
+                  30 [Years] 1996-2026 We're Still Out There IMDA MFA Open
+                  Studios / IMDA Alumni Showcase at the Lions Brothers Building
+                  | Baltimore, MD
+                </li>
               </ul>
 
               {/* exhibition 2025 */}
@@ -160,9 +195,42 @@ const About = () => {
               </button>
               {open.exhibitionYear2025 && (
                 <ul className={styles.exhibitions2025}>
-                  <li>Example Gallery 1 | Example City, MD</li>
-                  <li>Example Gallery 2 | Example City, MD</li>
-                  <li>Example Gallery 3 | Example City, MD</li>
+                  <li>
+                    Full Circle, Strathmore's 33rd Annual Juried Exhibition |
+                    Bethesda, MD |{" "}
+                    <b>
+                      <i>3rd Place Winner</i>
+                    </b>
+                  </li>
+                  <li>
+                    'Beauty is What We're Fighting For' Exhibition at the Cade
+                    Art Gallery at Anne Arundel Community College | Arnold, MD
+                  </li>
+                  <li>
+                    'Mother Nature' Exhibition at Kentlands Mansion | The
+                    Women's Caucus for Art of Greater Washington, D.C. (WCADC) |
+                    Gaithersburg, MD
+                  </li>
+                  <li>
+                    Nature Exhibition in the Naturalist Gallery of Contemporary
+                    Art | Online Curatorial Institution
+                  </li>
+                  <li>
+                    Art League of Germantown (ALOG) Featured Artist of the Month
+                    | Germantown, MD
+                  </li>
+                  <li>
+                    Mixed-Media Solo Exhibition at Baltimore County Public
+                    Library - Arbutus Branch | Arbutus, MD
+                  </li>
+                  <li>
+                    (un)Alter(ed) Ego Group Exhibition at the Bogus Gallery |
+                    Baltimore, MD
+                  </li>
+                  <li>
+                    One of the Grad Spotlights for November selected by the GSA
+                    Chief, UMBC | Baltimore, MD
+                  </li>
                 </ul>
               )}
 
@@ -234,6 +302,14 @@ const About = () => {
                     'Celebrate the Colors of the Season' Exhibition at Village
                     of Friendship Heights | The Women's Caucus for Art of
                     Greater Washington, D.C. (WCADC) | Chevy Chase, MD
+                  </li>
+                  <li>
+                    Fall 2024 |{" "}
+                    <b>
+                      <i>Passed</i>
+                    </b>{" "}
+                    Candidacy Graduate Review of the IMDA MFA Program at UMBC |
+                    Baltimore, MD
                   </li>
                 </ul>
               )}
@@ -370,7 +446,7 @@ const About = () => {
                     MD
                   </li>
                   <li>
-                    “Responsible Chaos” at the Department of Art | College Park,
+                    'Responsible Chaos' at the Department of Art | College Park,
                     MD
                   </li>
                   <li>
@@ -408,11 +484,11 @@ const About = () => {
           </div>
         </div>
       </div>
-      <Newsletter
+      {/* <Newsletter
         description="Get updates on new pieces, exhibitions, and what I'm working on."
         successMessage="In the meantime, feel free to look through my work."
         showGalleryButton={true}
-      />
+      /> */}
     </>
   );
 };

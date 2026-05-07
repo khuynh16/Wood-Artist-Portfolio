@@ -11,6 +11,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="gallery" element={<Gallery />} />
+        <Route path=":gallerySlug" element={<Gallery />} />
       </Routes>
     </BrowserRouter>
   );

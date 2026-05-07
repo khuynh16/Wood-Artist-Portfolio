@@ -2,47 +2,180 @@ const ArtworksData = [
   {
     name: "Thesis Exhibition",
     isCategoryPic: true,
-    thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Serenity/categoryPic.jpg"),
+    thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/categoryPic.jpg"),
     hasSubGallery: true,
     subGalleries: [
       {
-        name: "Part 1",
+        name: "Chiếc Lá Trôi Giữa Đôi Bờ",
         year: "2030.",
         medium: "Test Medium 1.",
         dimension: '25" x 25" x 25".',
         collectionOfPics: [
           {
-            thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Serenity/categoryPic.jpg"),
-            original: require("../../Assets/Images/ArtImages/Originals/Serenity/categoryPic.jpg"),
+            thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/2.jpg"),
+            original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/2.jpg"),
             isCategoryPic: true,
           },
         ],
       },
       {
-        name: "Part 2",
+        name: "Gợn Đầm",
         year: "2050.",
         medium: "Test Medium 2.",
         dimension: '25" x 25" x 25".',
         collectionOfPics: [
           {
-            thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Serenity/categoryPic.jpg"),
-            original: require("../../Assets/Images/ArtImages/Originals/Serenity/categoryPic.jpg"),
+            thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/8.jpg"),
+            original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/8.jpg"),
             isCategoryPic: true,
           },
         ],
       },
       {
-        name: "Part 3",
+        name: "Untitled",
         year: "2222.",
         medium: "Test Medium 2.",
         dimension: '25" x 25" x 25".',
         collectionOfPics: [
           {
-            thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Serenity/categoryPic.jpg"),
-            original: require("../../Assets/Images/ArtImages/Originals/Serenity/categoryPic.jpg"),
+            thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/5.jpg"),
+            original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/5.jpg"),
             isCategoryPic: true,
           },
         ],
+      },
+    ],
+    // collectionOfPics: [
+    //   {
+    //     thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/categoryPic.jpg"),
+    //     original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/categoryPic.jpg"),
+    //     isCategoryPic: true,
+    //     photographerDetails: "Photo taken by: Elle Jones",
+    //   },
+    //   {
+    //     thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/6.jpg"),
+    //     original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/6.jpg"),
+    //     isCategoryPic: false,
+    //     photographerDetails: "Designed by: Julie Sayo",
+    //   },
+    //   {
+    //     thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/1.jpg"),
+    //     original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/1.jpg"),
+    //     isCategoryPic: false,
+    //   },
+    //   {
+    //     thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/2.jpg"),
+    //     original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/2.jpg"),
+    //     isCategoryPic: false,
+    //     photographerDetails: "Photo taken by: Joshua Able-Carter",
+    //   },
+    //   {
+    //     thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/3.jpg"),
+    //     original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/3.jpg"),
+    //     isCategoryPic: false,
+    //   },
+    //   {
+    //     thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/4.jpg"),
+    //     original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/4.jpg"),
+    //     isCategoryPic: false,
+    //   },
+    //   {
+    //     thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/5.jpg"),
+    //     original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/5.jpg"),
+    //     isCategoryPic: false,
+    //   },
+    //   {
+    //     thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/7.jpg"),
+    //     original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/7.jpg"),
+    //     isCategoryPic: false,
+    //   },
+    //   {
+    //     thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/8.jpg"),
+    //     original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/8.jpg"),
+    //     isCategoryPic: false,
+    //   },
+    // ],
+  },
+  {
+    name: "Ngẫu Hứng",
+    thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/NgẫuHứng/categoryPic.jpg"),
+    year: "2025.",
+    medium: "Mixed Media.",
+    dimension: '24" x 9" x 30".',
+    collectionOfPics: [
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/NgẫuHứng/categoryPic.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/NgẫuHứng/categoryPic.jpg"),
+        isCategoryPic: true,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/NgẫuHứng/1.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/NgẫuHứng/1.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/NgẫuHứng/2.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/NgẫuHứng/2.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/NgẫuHứng/3.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/NgẫuHứng/3.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/NgẫuHứng/4.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/NgẫuHứng/4.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/NgẫuHứng/5.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/NgẫuHứng/5.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/NgẫuHứng/6.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/NgẫuHứng/6.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/NgẫuHứng/7.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/NgẫuHứng/7.jpg"),
+        isCategoryPic: false,
+      },
+    ],
+  },
+  {
+    name: "Memory Captor",
+    thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/MemoryCaptor/categoryPic.jpg"),
+    year: "2025.",
+    medium: "Mixed Media.",
+    dimension: '24" x 9" x 30".',
+    collectionOfPics: [
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/MemoryCaptor/categoryPic.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/MemoryCaptor/categoryPic.jpg"),
+        isCategoryPic: true,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/MemoryCaptor/1.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/MemoryCaptor/1.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/MemoryCaptor/2.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/MemoryCaptor/2.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/MemoryCaptor/3.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/MemoryCaptor/3.jpg"),
+        isCategoryPic: false,
+      },
+      {
+        thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/MemoryCaptor/4.jpg"),
+        original: require("../../Assets/Images/ArtImages/Originals/MemoryCaptor/4.jpg"),
+        isCategoryPic: false,
       },
     ],
   },
@@ -723,6 +856,7 @@ const ArtworksData = [
   },
   {
     name: "Reminiscence",
+    thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/Reminiscence/categoryPic.jpg"),
     year: "2021.",
     medium:
       "Wood Joinery; Marble Crystal; Resin Crystal Beads Casting; Mixed Media (Wood-Sound).",
