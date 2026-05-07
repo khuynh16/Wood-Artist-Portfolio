@@ -39,6 +39,7 @@ const Card = ({ initialArtworkSlug }) => {
       // Create one card per subgallery instead of flattening all images
       const subGalleryCards = artwork.subGalleries.map((g) => ({
         name: g.name,
+        nameReplacementInFancybox: g.nameReplacementInFancybox,
         year: g.year,
         medium: g.medium,
         dimension: g.dimension,

@@ -34,11 +34,13 @@ const ArtworksData = [
             thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/3.jpg"),
             original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/3.jpg"),
             isCategoryPic: false,
+            hideDimension: true,
           },
           {
             thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/4.jpg"),
             original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/4.jpg"),
             isCategoryPic: false,
+            hideDimension: true,
           },
         ],
       },
@@ -65,6 +67,7 @@ const ArtworksData = [
       },
       {
         name: "Gợn Đầm",
+        nameReplacementInFancybox: "Gợn Đầm (Ripples of the Pond)",
         year: "2026.",
         medium: "Mixed Media; Kinetic Sculptures.",
         dimension: '17" x 12" x 12".',
