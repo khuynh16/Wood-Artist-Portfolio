@@ -20,7 +20,7 @@ ul {
 }
 
 .navLinksContainer {
-  width: 30rem;
+  width: 40rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -127,15 +127,15 @@ button {
 
 @media screen and (max-width: 1440px) {
   .navLinksContainer {
-    width: 25rem;
+    width: 30rem;
   }
 }
 
-@media screen and (max-width: 1080px) {
+/* @media screen and (max-width: 1080px) {
   .navLinksContainer {
-    width: 20rem;
+    width: 25rem;
   }
-}
+} */
 
 @media screen and (max-width: 767px) {
   .navLinksContainer {

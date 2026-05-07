@@ -52,8 +52,8 @@
 }
 
 .artistName span {
-  border-left: 0.4vw solid black;
-  padding-left: 0.8vw;
+  border-left: 0.7rem solid black;
+  padding-left: 1.5rem;
 }
 
 .artistPhrase {
@@ -78,7 +78,7 @@
 
 .artistName,
 .artistPhrase {
-  font-size: 2.2vw;
+  font-size: 2.5rem;
 }
 
 @keyframes slide-down {
@@ -148,6 +148,17 @@
   .artistName,
   .artistPhrase {
     font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .navLinksContainer {
+    width: 30rem;
+  }
+
+  .artistName,
+  .artistPhrase {
+    font-size: 2rem;
   }
 }
 

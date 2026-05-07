@@ -57,7 +57,7 @@ const ArtworksData = [
       {
         name: "Chiếc Lá Trôi Giữa Đôi Bờ",
         nameReplacementInFancybox:
-          "Chiếc Lá Trôi Giữa Đôi Bờ (The Leaf Floating Between The Two Banks)",
+          "Chiếc Lá Trôi Giữa Đôi Bờ (The Leaf Floating Between Two Banks)",
         year: "2026.",
         medium: "Mixed Media; Wooden Sculpture.",
         dimension: '64" x 39" x 24".',
