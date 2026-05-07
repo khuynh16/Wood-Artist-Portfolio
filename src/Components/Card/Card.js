@@ -22,6 +22,7 @@ const Card = ({ initialArtworkSlug }) => {
   const [mode, setMode] = useState("categories");
   const [selectedArtwork, setSelectedArtwork] = useState(null);
   const [pictures, setPictures] = useState(getCategoryPictures());
+  const [loadedImages, setLoadedImages] = useState({});
 
   useEffect(() => {
     if (!initialArtworkSlug || mode !== "categories") {
@@ -200,6 +201,19 @@ const Card = ({ initialArtworkSlug }) => {
               height="350"
               alt={artwork.name}
               src={artwork.thumbnail}
+              loading="lazy"
+              decoding="async"
+              onLoad={() =>
+                setLoadedImages((prev) => ({
+                  ...prev,
+                  [artwork.thumbnail]: true,
+                }))
+              }
+              style={{
+                filter: loadedImages[artwork.thumbnail] ? "none" : "blur(5px)",
+                transition: "filter 300ms ease-out",
+                backgroundColor: "#f5f5f5",
+              }}
             />
 
             <CardContent className={styles.cardTextBody}>

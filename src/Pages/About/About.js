@@ -16,6 +16,7 @@ const About = () => {
     exhibitionYear2022: false,
     exhibitionYear2021: false,
   });
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   const toggle = (section) => {
     setOpen((prev) => ({
@@ -37,6 +38,13 @@ const About = () => {
               alt="example"
               className={styles.image}
               loading="lazy"
+              decoding="async"
+              onLoad={() => setImageLoaded(true)}
+              style={{
+                filter: imageLoaded ? "none" : "blur(5px)",
+                transition: "filter 300ms ease-out",
+                backgroundColor: "#f5f5f5",
+              }}
             />
             <p className={`${styles.bannerText} ${styles.desktopText}`}>
               The Story and Journey.
