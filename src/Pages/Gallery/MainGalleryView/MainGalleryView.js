@@ -14,7 +14,10 @@ const MainGalleryView = ({ initialArtworkSlug }) => {
         {initialArtworkSlug && (
           <button
             className={styles.backToGalleryButton}
-            onClick={() => navigate("/gallery")}
+            onClick={() => {
+              navigate("/gallery");
+              window.scrollTo(0, 0);
+            }}
           >
             <img
               className={styles.backArrow}
