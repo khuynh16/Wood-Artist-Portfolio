@@ -6,23 +6,68 @@ const ArtworksData = [
     hasSubGallery: true,
     subGalleries: [
       {
+        name: "In Context",
+        year: "2026.",
+        medium: "Installation of Mixed Media; Wooden and Kinetic Sculptures.",
+        dimension: '147" x 258" x 144".',
+        collectionOfPics: [
+          {
+            thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/categoryPic.jpg"),
+            original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/categoryPic.jpg"),
+            isCategoryPic: true,
+            photographerDetails: "Photo taken by: Elle Jones",
+          },
+          {
+            thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/6.jpg"),
+            original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/6.jpg"),
+            isCategoryPic: false,
+            photographerDetails: "Designed by: Julie Sayo",
+            hideMedium: true,
+            hideDimension: true,
+          },
+          {
+            thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/1.jpg"),
+            original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/1.jpg"),
+            isCategoryPic: false,
+          },
+          {
+            thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/3.jpg"),
+            original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/3.jpg"),
+            isCategoryPic: false,
+          },
+          {
+            thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/4.jpg"),
+            original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/4.jpg"),
+            isCategoryPic: false,
+          },
+        ],
+      },
+      {
         name: "Chiếc Lá Trôi Giữa Đôi Bờ",
-        year: "2030.",
-        medium: "Test Medium 1.",
-        dimension: '25" x 25" x 25".',
+        nameReplacementInFancybox:
+          "Chiếc Lá Trôi Giữa Đôi Bờ (The Leaf Floating Between The Two Banks)",
+        year: "2026.",
+        medium: "Mixed Media; Wooden Sculpture.",
+        dimension: '64" x 39" x 24".',
         collectionOfPics: [
           {
             thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/2.jpg"),
             original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/2.jpg"),
             isCategoryPic: true,
+            photographerDetails: "Photo taken by: Joshua Able-Carter",
+          },
+          {
+            thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/7.jpg"),
+            original: require("../../Assets/Images/ArtImages/Originals/ThesisExhibition/7.jpg"),
+            isCategoryPic: false,
           },
         ],
       },
       {
         name: "Gợn Đầm",
-        year: "2050.",
-        medium: "Test Medium 2.",
-        dimension: '25" x 25" x 25".',
+        year: "2026.",
+        medium: "Mixed Media; Kinetic Sculptures.",
+        dimension: '17" x 12" x 12".',
         collectionOfPics: [
           {
             thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/8.jpg"),
@@ -33,9 +78,9 @@ const ArtworksData = [
       },
       {
         name: "Untitled",
-        year: "2222.",
-        medium: "Test Medium 2.",
-        dimension: '25" x 25" x 25".',
+        year: "2026.",
+        medium: "3D Printed Text on Wall.",
+        dimension: '24" x 48" x 0.5".',
         collectionOfPics: [
           {
             thumbnail: require("../../Assets/Images/ArtImages/Thumbnails/ThesisExhibition/5.jpg"),

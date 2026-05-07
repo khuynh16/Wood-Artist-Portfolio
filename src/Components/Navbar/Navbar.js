@@ -13,6 +13,12 @@ const Navbar = () => {
     document.body.style.overflow = isNavExpanded ? "hidden" : "auto";
   }, [isNavExpanded]);
 
+  useEffect(() => {
+    if (isNavExpanded) {
+      setIsNavExpanded(false);
+    }
+  }, [location.pathname]);
+
   return (
     <>
       <nav className={styles.nav}>

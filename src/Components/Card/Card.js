@@ -36,20 +36,34 @@ const Card = ({ initialArtworkSlug }) => {
     if (artwork) {
       setSelectedArtwork(artwork.name);
 
-      const subGalleryFlattened = artwork.subGalleries.flatMap((g) =>
-        g.collectionOfPics.map((pic) => ({
-          ...pic,
-          name: g.name,
-          year: g.year,
-          medium: g.medium,
-          dimension: g.dimension,
-          parentArtworkName: artwork.name,
-        })),
-      );
+      // Create one card per subgallery instead of flattening all images
+      const subGalleryCards = artwork.subGalleries.map((g) => ({
+        name: g.name,
+        year: g.year,
+        medium: g.medium,
+        dimension: g.dimension,
+        hideMedium: g.hideMedium,
+        hideDimension: g.hideDimension,
+        thumbnail: g.collectionOfPics[0]?.thumbnail,
+        original: g.collectionOfPics[0]?.original,
+        collectionOfPics: g.collectionOfPics,
+        parentArtworkName: artwork.name,
+        isSubGalleryCard: true,
+      }));
 
-      setPictures(subGalleryFlattened);
+      setPictures(subGalleryCards);
       setMode("subgallery");
     }
+  }, [initialArtworkSlug, mode]);
+
+  useEffect(() => {
+    if (initialArtworkSlug || mode === "categories") {
+      return;
+    }
+
+    setSelectedArtwork(null);
+    setPictures(getCategoryPictures());
+    setMode("categories");
   }, [initialArtworkSlug, mode]);
 
   useEffect(() => {
@@ -67,19 +81,59 @@ const Card = ({ initialArtworkSlug }) => {
       navigate(`/${slugify(item.name)}`);
       setSelectedArtwork(item.name);
 
-      const subGalleryFlattened = item.subGalleries.flatMap((g) =>
-        g.collectionOfPics.map((pic) => ({
-          ...pic,
-          name: g.name,
-          year: g.year,
-          medium: g.medium,
-          dimension: g.dimension,
-          parentArtworkName: item.name,
-        })),
-      );
+      // Create one card per subgallery instead of flattening all images
+      const subGalleryCards = item.subGalleries.map((g) => ({
+        name: g.name,
+        nameReplacementInFancybox: g.nameReplacementInFancybox,
+        year: g.year,
+        medium: g.medium,
+        dimension: g.dimension,
+        hideMedium: g.hideMedium,
+        hideDimension: g.hideDimension,
+        thumbnail: g.collectionOfPics[0]?.thumbnail,
+        original: g.collectionOfPics[0]?.original,
+        collectionOfPics: g.collectionOfPics,
+        parentArtworkName: item.name,
+        isSubGalleryCard: true,
+      }));
 
-      setPictures(subGalleryFlattened);
+      setPictures(subGalleryCards);
       setMode("subgallery");
+    }
+
+    // CASE 1.5: Clicking a subgallery card -> Open Fancybox with all images from that subgallery
+    else if (item.isSubGalleryCard) {
+      const galleryItems = item.collectionOfPics.map((pic) => {
+        const hideMedium = item.hideMedium === true || pic.hideMedium === true;
+        const hideDimension =
+          item.hideDimension === true || pic.hideDimension === true;
+        const showMedium = !!item.medium && !hideMedium;
+        const showDimension = !!item.dimension && !hideDimension;
+
+        return {
+          src: pic.original,
+          thumb: pic.thumbnail,
+          caption: `
+            <h2 style="display:flex;justify-content:center;padding-top:25px;font-style:italic">
+              ${pic.nameReplacementInFancybox || item.nameReplacementInFancybox || item.name}
+            </h2>
+            <h3 style="display:flex;justify-content:center;margin-top:20px">
+              ${item.year || ""}
+            </h3>
+            ${showMedium ? `<h3 style="display:flex;justify-content:center;align-items:center;text-align:center">${item.medium}</h3>` : ""}
+            ${showDimension ? `<h3 style="display:flex;justify-content:center">${item.dimension}</h3>` : ""}
+            ${
+              pic.photographerDetails
+                ? `<h3 style="display:flex;justify-content:center;">${pic.photographerDetails}</h3>`
+                : ""
+            }
+          `,
+        };
+      });
+
+      Fancybox.show(galleryItems, {
+        infinite: true,
+      });
     }
 
     // CASE 2: Normal artwork (e.g., Serenity) -> Open Fancybox immediately with all images
@@ -91,30 +145,34 @@ const Card = ({ initialArtworkSlug }) => {
       const fullArtwork = ArtworksData.find((a) => a.name === item.name);
 
       if (fullArtwork && fullArtwork.collectionOfPics) {
-        // Map the collection to the format Fancybox.show() expects
-        const galleryItems = fullArtwork.collectionOfPics.map((pic) => ({
-          src: pic.original,
-          thumb: pic.thumbnail,
-          caption: `
-            <h2 style="display:flex;justify-content:center;padding-top:25px;font-style:italic">
-              ${fullArtwork.name}
-            </h2>
-            <h3 style="display:flex;justify-content:center;margin-top:20px">
-              ${fullArtwork.year || ""}
-            </h3>
-            <h3 style="display:flex;justify-content:center;align-items:center;text-align:center">
-              ${fullArtwork.medium || ""}
-            </h3>
-            <h3 style="display:flex;justify-content:center">
-              ${fullArtwork.dimension || ""}
-            </h3>
-            ${
-              fullArtwork.photographerDetails
-                ? `<h3 style="display:flex;justify-content:center;">${fullArtwork.photographerDetails}</h3>`
-                : ""
-            }
-          `,
-        }));
+        const galleryItems = fullArtwork.collectionOfPics.map((pic) => {
+          const hideMedium =
+            fullArtwork.hideMedium === true || pic.hideMedium === true;
+          const hideDimension =
+            fullArtwork.hideDimension === true || pic.hideDimension === true;
+          const showMedium = !!fullArtwork.medium && !hideMedium;
+          const showDimension = !!fullArtwork.dimension && !hideDimension;
+
+          return {
+            src: pic.original,
+            thumb: pic.thumbnail,
+            caption: `
+              <h2 style="display:flex;justify-content:center;padding-top:25px;font-style:italic">
+                ${pic.nameReplacementInFancybox || fullArtwork.name}
+              </h2>
+              <h3 style="display:flex;justify-content:center;margin-top:20px">
+                ${fullArtwork.year || ""}
+              </h3>
+              ${showMedium ? `<h3 style="display:flex;justify-content:center;align-items:center;text-align:center">${fullArtwork.medium}</h3>` : ""}
+              ${showDimension ? `<h3 style="display:flex;justify-content:center">${fullArtwork.dimension}</h3>` : ""}
+              ${
+                fullArtwork.photographerDetails
+                  ? `<h3 style="display:flex;justify-content:center;">${fullArtwork.photographerDetails}</h3>`
+                  : ""
+              }
+            `,
+          };
+        });
 
         // Launch Fancybox manually with the array of images
         Fancybox.show(galleryItems, {
@@ -131,33 +189,10 @@ const Card = ({ initialArtworkSlug }) => {
       {pictures.map((artwork) => (
         <MuiCard key={artwork.thumbnail} className={styles.card}>
           <CardActionArea
-            // In categories mode, we stay as a div to handle the logic manually
-            // In subgallery mode, we become an <a> for Fancybox auto-binding
-            component={isImageMode ? "a" : "div"}
+            // Always use div and handleClick for subgallery cards
+            // Regular category cards also use div with handleClick
+            component="div"
             onClick={() => handleClick(artwork)}
-            {...(isImageMode && {
-              href: artwork.original,
-              "data-fancybox": artwork.name,
-              "data-caption": `
-                <h2 style="display:flex;justify-content:center;padding-top:25px;font-style:italic">
-                  ${artwork.name}
-                </h2>
-                <h3 style="display:flex;justify-content:center;margin-top:20px">
-                  ${artwork.year}
-                </h3>
-                <h3 style="display:flex;justify-content:center;align-items:center;text-align:center">
-                  ${artwork.medium}
-                </h3>
-                <h3 style="display:flex;justify-content:center">
-                  ${artwork.dimension}
-                </h3> 
-                ${
-                  artwork.photographerDetails
-                    ? `<h3 style="display:flex;justify-content:center;">${artwork.photographerDetails}</h3>`
-                    : ""
-                }
-              `,
-            })}
           >
             <CardMedia
               component="img"
