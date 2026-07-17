@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 4vh;
+  padding-top: 2vh;
   /* min-height: 90vh; */
   height: auto;
 }
@@ -16,7 +16,7 @@
   justify-items: center;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-gap: 40px;
-  padding-bottom: 10vh;
+  padding-bottom: 6vh;
   overflow: visible;
   box-sizing: border-box;
   max-width: 1400px;
