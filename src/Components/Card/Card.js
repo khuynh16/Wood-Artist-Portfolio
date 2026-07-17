@@ -78,6 +78,162 @@ const Card = ({ initialArtworkSlug }) => {
     };
   }, [pictures]);
 
+  useEffect(() => {
+    ensureFullscreenStyles();
+  }, []);
+
+  const fancyboxOptions = {
+    infinite: true,
+    Image: {
+      click: null,
+      doubleClick: null,
+      wheel: "zoom",
+      fit: "contain",
+      zoom: true,
+    },
+  };
+
+  const toggleFullscreen = (container) => {
+    const isFullscreen =
+      document.fullscreenElement ||
+      document.mozFullScreenElement ||
+      document.webkitFullscreenElement ||
+      document.msFullscreenElement;
+
+    if (isFullscreen) {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
+      }
+    } else if (container.requestFullscreen) {
+      container.requestFullscreen();
+    } else if (container.mozRequestFullScreen) {
+      container.mozRequestFullScreen();
+    } else if (container.webkitRequestFullscreen) {
+      container.webkitRequestFullscreen();
+    } else if (container.msRequestFullscreen) {
+      container.msRequestFullscreen();
+    }
+  };
+
+  const fullscreenClassName = "fancybox__fullscreen-hide-captions";
+
+  const ensureFullscreenStyles = () => {
+    if (document.getElementById("fancybox-fullscreen-hide-captions-style")) {
+      return;
+    }
+
+    const style = document.createElement("style");
+    style.id = "fancybox-fullscreen-hide-captions-style";
+    style.textContent = `
+      .${fullscreenClassName} .fancybox__caption,
+      .${fullscreenClassName} .fancybox__thumbs {
+        display: none !important;
+      }
+
+      .fancybox__image {
+        cursor: zoom-in !important;
+      }
+
+      .${fullscreenClassName} .fancybox__image {
+        cursor: pointer !important;
+      }
+    `;
+
+    document.head.appendChild(style);
+  };
+
+  const setFullscreenCaptionClass = (container, enabled) => {
+    if (!container) {
+      return;
+    }
+
+    ensureFullscreenStyles();
+
+    if (enabled) {
+      container.classList.add(fullscreenClassName);
+    } else {
+      container.classList.remove(fullscreenClassName);
+    }
+  };
+
+  const isContainerFullscreen = (container) => {
+    const fullscreenElement =
+      document.fullscreenElement ||
+      document.mozFullScreenElement ||
+      document.webkitFullscreenElement ||
+      document.msFullscreenElement;
+
+    return fullscreenElement === container;
+  };
+
+  const attachFullscreenOnImageClick = (instance) => {
+    if (!instance || !instance.$container) {
+      return;
+    }
+
+    const handleFullscreenChange = () => {
+      setFullscreenCaptionClass(
+        instance.$container,
+        isContainerFullscreen(instance.$container),
+      );
+    };
+
+    const onContainerClick = (event) => {
+      const image = event.target.closest(".fancybox__image");
+      const fullscreenButton = event.target.closest(
+        ".fancybox__button--fullscreen",
+      );
+
+      if (!image && !fullscreenButton) {
+        return;
+      }
+
+      if (image) {
+        event.preventDefault();
+        event.stopPropagation();
+        toggleFullscreen(instance.$container);
+      }
+    };
+
+    document.addEventListener("fullscreenchange", handleFullscreenChange);
+    document.addEventListener("webkitfullscreenchange", handleFullscreenChange);
+    document.addEventListener("mozfullscreenchange", handleFullscreenChange);
+    document.addEventListener("MSFullscreenChange", handleFullscreenChange);
+    instance.$container.addEventListener("click", onContainerClick);
+
+    // Set cursor style initially for the image before fullscreen is entered
+    setFullscreenCaptionClass(instance.$container, false);
+
+    if (instance.on) {
+      instance.on("closing", () => {
+        document.removeEventListener(
+          "fullscreenchange",
+          handleFullscreenChange,
+        );
+        document.removeEventListener(
+          "webkitfullscreenchange",
+          handleFullscreenChange,
+        );
+        document.removeEventListener(
+          "mozfullscreenchange",
+          handleFullscreenChange,
+        );
+        document.removeEventListener(
+          "MSFullscreenChange",
+          handleFullscreenChange,
+        );
+        instance.$container.removeEventListener("click", onContainerClick);
+        setFullscreenCaptionClass(instance.$container, false);
+      });
+    }
+  };
+
   const handleClick = (item) => {
     // CASE 1: Has subgalleries (e.g., Thesis Exhibition) -> Drill down to new grid
     if (item.subGalleries?.length > 0) {
@@ -134,9 +290,8 @@ const Card = ({ initialArtworkSlug }) => {
         };
       });
 
-      Fancybox.show(galleryItems, {
-        infinite: true,
-      });
+      const instance = Fancybox.show(galleryItems, fancyboxOptions);
+      attachFullscreenOnImageClick(instance);
     }
 
     // CASE 2: Normal artwork (e.g., Serenity) -> Open Fancybox immediately with all images
@@ -178,9 +333,8 @@ const Card = ({ initialArtworkSlug }) => {
         });
 
         // Launch Fancybox manually with the array of images
-        Fancybox.show(galleryItems, {
-          infinite: true,
-        });
+        const instance = Fancybox.show(galleryItems, fancyboxOptions);
+        attachFullscreenOnImageClick(instance);
       }
     }
   };
