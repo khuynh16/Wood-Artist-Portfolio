@@ -21,7 +21,11 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={styles.nav}>
+      <nav
+        className={`${styles.nav} ${
+          location.pathname !== "/" ? styles.sticky : ""
+        }`}
+      >
         <ReusableLogo />
         <div
           className={

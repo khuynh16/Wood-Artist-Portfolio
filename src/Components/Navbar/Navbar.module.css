@@ -3,6 +3,14 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: 10vh;
+  background-color: white;
+  z-index: 999;
+  /* border-bottom: 1px solid #e0e0e0; */
+}
+
+nav.sticky {
+  position: sticky;
+  top: 0;
 }
 
 ul {
