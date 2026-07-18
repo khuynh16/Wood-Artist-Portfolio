@@ -177,9 +177,8 @@ const Card = ({ initialArtworkSlug }) => {
     // Handle clicks outside the image (on the dark background/container)
     const onBackgroundClick = (event) => {
       // Check if we're in full screen mode
-      const isInFullscreen = instance.$container.classList.contains(
-        fullscreenClassName,
-      );
+      const isInFullscreen =
+        instance.$container.classList.contains(fullscreenClassName);
 
       // Check if click is outside the image
       const isClickOnImage = event.target.closest(".fancybox__image");
