@@ -174,8 +174,35 @@ const Card = ({ initialArtworkSlug }) => {
       toggleFullscreen(instance.$container);
     };
 
+    // Handle clicks outside the image (on the dark background/container)
+    const onBackgroundClick = (event) => {
+      // Check if we're in full screen mode
+      const isInFullscreen = instance.$container.classList.contains(
+        fullscreenClassName,
+      );
+
+      // Check if click is outside the image
+      const isClickOnImage = event.target.closest(".fancybox__image");
+      const isClickOnButton = event.target.closest(".fancybox__button");
+      const isClickOnArrow = event.target.closest(".carousel__button");
+
+      // If we're in full screen mode and clicked outside the image/buttons/arrows, exit full screen instead of closing
+      if (
+        isInFullscreen &&
+        !isClickOnImage &&
+        !isClickOnButton &&
+        !isClickOnArrow
+      ) {
+        event.preventDefault();
+        event.stopPropagation();
+        toggleFullscreen(instance.$container);
+        return;
+      }
+    };
+
     // Use capture phase to intercept events early and prevent Fancybox's default behavior
     instance.$container.addEventListener("click", onContainerClick, true);
+    instance.$container.addEventListener("click", onBackgroundClick, true);
 
     // Set initial cursor style for the image
     setFullscreenCaptionClass(instance.$container, false);
@@ -185,6 +212,11 @@ const Card = ({ initialArtworkSlug }) => {
         instance.$container.removeEventListener(
           "click",
           onContainerClick,
+          true,
+        );
+        instance.$container.removeEventListener(
+          "click",
+          onBackgroundClick,
           true,
         );
         setFullscreenCaptionClass(instance.$container, false);
