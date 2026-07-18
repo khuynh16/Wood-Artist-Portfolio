@@ -135,6 +135,12 @@ const Card = ({ initialArtworkSlug }) => {
       .${fullscreenClassName} .fancybox__image {
         cursor: zoom-out !important;
       }
+
+      .${fullscreenClassName} .fancybox__button--thumbs {
+        opacity: 0.4 !important;
+        cursor: not-allowed !important;
+        pointer-events: none !important;
+      }
     `;
 
     document.head.appendChild(style);
@@ -179,6 +185,28 @@ const Card = ({ initialArtworkSlug }) => {
       // Check if we're in full screen mode
       const isInFullscreen =
         instance.$container.classList.contains(fullscreenClassName);
+
+      // Check if click is on the disabled thumbnail button
+      // (pointer-events: none means clicks pass through, so we need to check bounds)
+      const thumbnailButton = instance.$container.querySelector(
+        ".fancybox__button--thumbs",
+      );
+      let isClickOnDisabledThumbnail = false;
+      if (thumbnailButton && isInFullscreen) {
+        const rect = thumbnailButton.getBoundingClientRect();
+        isClickOnDisabledThumbnail =
+          event.clientX >= rect.left &&
+          event.clientX <= rect.right &&
+          event.clientY >= rect.top &&
+          event.clientY <= rect.bottom;
+      }
+
+      // If clicking on the disabled thumbnail button, do nothing and prevent closing carousel
+      if (isClickOnDisabledThumbnail) {
+        event.preventDefault();
+        event.stopPropagation();
+        return;
+      }
 
       // Check if click is outside the image
       const isClickOnImage = event.target.closest(".fancybox__image");
