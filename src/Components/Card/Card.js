@@ -94,46 +94,44 @@ const Card = ({ initialArtworkSlug }) => {
   };
 
   const toggleFullscreen = (container) => {
-    const isFullscreen =
-      document.fullscreenElement ||
-      document.mozFullScreenElement ||
-      document.webkitFullscreenElement ||
-      document.msFullscreenElement;
+    // Toggle the UI hide class instead of going to fullscreen
+    const isHidden = container.classList.contains(fullscreenClassName);
 
-    if (isFullscreen) {
-      if (document.exitFullscreen) {
-        document.exitFullscreen();
-      } else if (document.mozCancelFullScreen) {
-        document.mozCancelFullScreen();
-      } else if (document.webkitExitFullscreen) {
-        document.webkitExitFullscreen();
-      } else if (document.msExitFullscreen) {
-        document.msExitFullscreen();
-      }
-    } else if (container.requestFullscreen) {
-      container.requestFullscreen();
-    } else if (container.mozRequestFullScreen) {
-      container.mozRequestFullScreen();
-    } else if (container.webkitRequestFullscreen) {
-      container.webkitRequestFullscreen();
-    } else if (container.msRequestFullscreen) {
-      container.msRequestFullscreen();
+    if (isHidden) {
+      container.classList.remove(fullscreenClassName);
+    } else {
+      container.classList.add(fullscreenClassName);
     }
   };
 
-  const fullscreenClassName = "fancybox__fullscreen-hide-captions";
+  const fullscreenClassName = "fancybox__hide-ui";
 
   const ensureFullscreenStyles = () => {
-    if (document.getElementById("fancybox-fullscreen-hide-captions-style")) {
+    if (document.getElementById("fancybox-hide-ui-style")) {
       return;
     }
 
     const style = document.createElement("style");
-    style.id = "fancybox-fullscreen-hide-captions-style";
+    style.id = "fancybox-hide-ui-style";
     style.textContent = `
-      .${fullscreenClassName} .fancybox__caption,
+      .${fullscreenClassName} .fancybox__caption {
+        display: none !important;
+      }
+
       .${fullscreenClassName} .fancybox__thumbs {
         display: none !important;
+      }
+
+      .${fullscreenClassName} .fancybox__content {
+        width: 100% !important;
+        height: 100% !important;
+      }
+
+      .${fullscreenClassName} .fancybox__image {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: none !important;
+        max-height: none !important;
       }
 
       .fancybox__image {
@@ -141,7 +139,7 @@ const Card = ({ initialArtworkSlug }) => {
       }
 
       .${fullscreenClassName} .fancybox__image {
-        cursor: pointer !important;
+        cursor: zoom-out !important;
       }
     `;
 
@@ -162,72 +160,30 @@ const Card = ({ initialArtworkSlug }) => {
     }
   };
 
-  const isContainerFullscreen = (container) => {
-    const fullscreenElement =
-      document.fullscreenElement ||
-      document.mozFullScreenElement ||
-      document.webkitFullscreenElement ||
-      document.msFullscreenElement;
-
-    return fullscreenElement === container;
-  };
-
   const attachFullscreenOnImageClick = (instance) => {
     if (!instance || !instance.$container) {
       return;
     }
 
-    const handleFullscreenChange = () => {
-      setFullscreenCaptionClass(
-        instance.$container,
-        isContainerFullscreen(instance.$container),
-      );
-    };
-
     const onContainerClick = (event) => {
       const image = event.target.closest(".fancybox__image");
-      const fullscreenButton = event.target.closest(
-        ".fancybox__button--fullscreen",
-      );
 
-      if (!image && !fullscreenButton) {
+      if (!image) {
         return;
       }
 
-      if (image) {
-        event.preventDefault();
-        event.stopPropagation();
-        toggleFullscreen(instance.$container);
-      }
+      event.preventDefault();
+      event.stopPropagation();
+      toggleFullscreen(instance.$container);
     };
 
-    document.addEventListener("fullscreenchange", handleFullscreenChange);
-    document.addEventListener("webkitfullscreenchange", handleFullscreenChange);
-    document.addEventListener("mozfullscreenchange", handleFullscreenChange);
-    document.addEventListener("MSFullscreenChange", handleFullscreenChange);
     instance.$container.addEventListener("click", onContainerClick);
 
-    // Set cursor style initially for the image before fullscreen is entered
+    // Set initial cursor style for the image
     setFullscreenCaptionClass(instance.$container, false);
 
     if (instance.on) {
       instance.on("closing", () => {
-        document.removeEventListener(
-          "fullscreenchange",
-          handleFullscreenChange,
-        );
-        document.removeEventListener(
-          "webkitfullscreenchange",
-          handleFullscreenChange,
-        );
-        document.removeEventListener(
-          "mozfullscreenchange",
-          handleFullscreenChange,
-        );
-        document.removeEventListener(
-          "MSFullscreenChange",
-          handleFullscreenChange,
-        );
         instance.$container.removeEventListener("click", onContainerClick);
         setFullscreenCaptionClass(instance.$container, false);
       });
