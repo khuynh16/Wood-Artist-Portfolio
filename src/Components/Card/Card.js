@@ -161,8 +161,11 @@ const Card = ({ initialArtworkSlug }) => {
 
     const onContainerClick = (event) => {
       const image = event.target.closest(".fancybox__image");
+      const fullscreenButton = event.target.closest(
+        ".fancybox__button--fullscreen",
+      );
 
-      if (!image) {
+      if (!image && !fullscreenButton) {
         return;
       }
 
@@ -171,14 +174,19 @@ const Card = ({ initialArtworkSlug }) => {
       toggleFullscreen(instance.$container);
     };
 
-    instance.$container.addEventListener("click", onContainerClick);
+    // Use capture phase to intercept events early and prevent Fancybox's default behavior
+    instance.$container.addEventListener("click", onContainerClick, true);
 
     // Set initial cursor style for the image
     setFullscreenCaptionClass(instance.$container, false);
 
     if (instance.on) {
       instance.on("closing", () => {
-        instance.$container.removeEventListener("click", onContainerClick);
+        instance.$container.removeEventListener(
+          "click",
+          onContainerClick,
+          true,
+        );
         setFullscreenCaptionClass(instance.$container, false);
       });
     }
