@@ -122,16 +122,10 @@ const Card = ({ initialArtworkSlug }) => {
         display: none !important;
       }
 
-      .${fullscreenClassName} .fancybox__content {
-        width: 100% !important;
-        height: 100% !important;
-      }
-
-      .${fullscreenClassName} .fancybox__image {
-        width: 100% !important;
-        height: 100% !important;
-        max-width: none !important;
-        max-height: none !important;
+      .${fullscreenClassName} .fancybox__inner {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
       }
 
       .fancybox__image {
